@@ -3,190 +3,194 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arturo Fuentes Coria | CV y Consultoría</title>
-  <meta id="metaDescription" name="description" content="CV profesional y servicios de consultoría de Arturo Fuentes Coria." />
+  <title>Arturo Fuentes Coria | CV & Consultoría</title>
+  <meta
+    name="description"
+    content="CV profesional y servicios de consultoría de Arturo Fuentes Coria."
+  />
 
   <style>
-    :root,[data-theme="light"]{
-      --text-xs:clamp(.75rem,.7rem + .25vw,.875rem);
-      --text-sm:clamp(.875rem,.8rem + .35vw,1rem);
-      --text-base:clamp(1rem,.95rem + .25vw,1.125rem);
-      --text-lg:clamp(1.125rem,1rem + .75vw,1.5rem);
-      --text-xl:clamp(1.5rem,1.2rem + 1.25vw,2.25rem);
-      --text-2xl:clamp(2rem,1.2rem + 2.5vw,3.5rem);
+    :root,
+    [data-theme="light"] {
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
 
-      --space-2:.5rem;
-      --space-3:.75rem;
-      --space-4:1rem;
-      --space-5:1.25rem;
-      --space-6:1.5rem;
-      --space-8:2rem;
-      --space-10:2.5rem;
+      --space-1: 0.25rem;
+      --space-2: 0.5rem;
+      --space-3: 0.75rem;
+      --space-4: 1rem;
+      --space-5: 1.25rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+      --space-10: 2.5rem;
+      --space-12: 3rem;
 
-      --color-bg:#f7f6f2;
-      --color-surface:#fbfbf9;
-      --color-surface-2:#f0ede8;
-      --color-border:#d8d3cb;
-      --color-text:#25211b;
-      --color-text-muted:#6f6b64;
-      --color-text-inverse:#f8f7f4;
-      --color-primary:#01696f;
-      --color-primary-hover:#0c4e54;
-      --color-primary-soft:#dfeceb;
-      --color-blue:#006494;
+      --color-bg: #f7f6f2;
+      --color-surface: #fbfbf9;
+      --color-surface-2: #f0ede8;
+      --color-border: #d8d3cb;
 
-      --radius-lg:1.25rem;
-      --radius-xl:1.75rem;
-      --radius-full:9999px;
+      --color-text: #25211b;
+      --color-text-muted: #6f6b64;
+      --color-text-inverse: #f8f7f4;
 
-      --shadow-sm:0 1px 2px rgba(28,22,16,.06);
-      --shadow-md:0 10px 30px rgba(28,22,16,.09);
+      --color-primary: #01696f;
+      --color-primary-hover: #0c4e54;
+      --color-primary-soft: #dfeceb;
+      --color-blue: #006494;
 
-      --transition:180ms cubic-bezier(.16,1,.3,1);
-      --content-wide:1180px;
+      --radius-sm: 0.5rem;
+      --radius-md: 0.875rem;
+      --radius-lg: 1.25rem;
+      --radius-xl: 1.75rem;
+      --radius-full: 9999px;
+
+      --shadow-sm: 0 1px 2px rgba(28, 22, 16, 0.06);
+      --shadow-md: 0 10px 30px rgba(28, 22, 16, 0.09);
+
+      --font-body: Arial, Helvetica, sans-serif;
+      --font-display: Arial, Helvetica, sans-serif;
+
+      --content-wide: 1180px;
+      --transition: 180ms cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    [data-theme="dark"]{
-      --color-bg:#141311;
-      --color-surface:#1c1b19;
-      --color-surface-2:#23211f;
-      --color-border:#393632;
-      --color-text:#e4e0d9;
-      --color-text-muted:#b0aaa1;
-      --color-text-inverse:#171513;
-      --color-primary:#63a9b1;
-      --color-primary-hover:#88bdc3;
-      --color-primary-soft:#223132;
-      --color-blue:#75acd5;
-      --shadow-sm:0 1px 2px rgba(0,0,0,.2);
-      --shadow-md:0 10px 30px rgba(0,0,0,.28);
+    [data-theme="dark"] {
+      --color-bg: #141311;
+      --color-surface: #1c1b19;
+      --color-surface-2: #23211f;
+      --color-border: #393632;
+
+      --color-text: #e4e0d9;
+      --color-text-muted: #b0aaa1;
+      --color-text-inverse: #171513;
+
+      --color-primary: #63a9b1;
+      --color-primary-hover: #88bdc3;
+      --color-primary-soft: #223132;
+      --color-blue: #75acd5;
+
+      --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+      --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.28);
     }
 
-    *{
-      box-sizing:border-box;
-      margin:0;
-      padding:0;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    html{
-      -webkit-font-smoothing:antialiased;
-      scroll-behavior:smooth;
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
     }
 
-    body{
-      min-height:100vh;
+    body {
+      min-height: 100vh;
       background:
-        radial-gradient(circle at top right,rgba(1,105,111,.08),transparent 30%),
-        radial-gradient(circle at left 20%,rgba(0,100,148,.06),transparent 25%),
+        radial-gradient(circle at top right, rgba(1, 105, 111, 0.08), transparent 30%),
+        radial-gradient(circle at left 20%, rgba(0, 100, 148, 0.06), transparent 25%),
         var(--color-bg);
-      color:var(--color-text);
-      font-family:Arial,Helvetica,sans-serif;
-      font-size:var(--text-base);
-      line-height:1.6;
+      color: var(--color-text);
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      line-height: 1.6;
     }
 
-    img,svg{
-      display:block;
-      max-width:100%;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
-    a{
-      color:inherit;
-      text-decoration:none;
+    button {
+      font: inherit;
+      border: 0;
+      background: none;
+      color: inherit;
+      cursor: pointer;
     }
 
-    button{
-      font:inherit;
-      border:0;
-      background:none;
-      color:inherit;
-      cursor:pointer;
+    .page {
+      max-width: var(--content-wide);
+      margin: 0 auto;
+      padding: var(--space-6);
     }
 
-    .page{
-      max-width:var(--content-wide);
-      margin:0 auto;
-      padding:var(--space-6);
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--space-4);
+      padding: var(--space-4) 0;
     }
 
-    .topbar{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:var(--space-4);
-      padding:var(--space-4) 0;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
     }
 
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:var(--space-3);
+    .logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-blue));
+      display: grid;
+      place-items: center;
+      color: white;
+      box-shadow: var(--shadow-sm);
+      font-weight: 900;
+      font-size: 1.1rem;
     }
 
-    .logo{
-      width:44px;
-      height:44px;
-      border-radius:14px;
-      background:linear-gradient(
-        135deg,
-        var(--color-primary),
-        var(--color-blue)
-      );
-      display:grid;
-      place-items:center;
-      color:white;
-      box-shadow:var(--shadow-sm);
+    .brand-text strong {
+      display: block;
+      font-size: var(--text-sm);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
-    .logo svg{
-      width:24px;
-      height:24px;
+    .brand-text span {
+      display: block;
+      color: var(--color-text-muted);
+      font-size: var(--text-xs);
     }
 
-    .brand-text strong{
-      display:block;
-      font-size:var(--text-sm);
-      letter-spacing:.08em;
-      text-transform:uppercase;
-    }
-
-    .brand-text span{
-      display:block;
-      color:var(--color-text-muted);
-      font-size:var(--text-xs);
-    }
-
-    .controls{
-      display:flex;
-      gap:var(--space-2);
-      flex-wrap:wrap;
+    .controls {
+      display: flex;
+      gap: var(--space-2);
+      flex-wrap: wrap;
     }
 
     .control-btn,
-    .lang-btn{
-      min-width:44px;
-      min-height:44px;
-      padding:0 var(--space-4);
-      border:1px solid var(--color-border);
-      border-radius:var(--radius-full);
-      background:var(--color-surface);
-      transition:all var(--transition);
+    .lang-btn {
+      min-width: 44px;
+      min-height: 44px;
+      padding: 0 var(--space-4);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-full);
+      background: var(--color-surface);
+      transition: all var(--transition);
     }
 
     .control-btn:hover,
     .lang-btn:hover,
-    .lang-btn.active{
-      background:var(--color-primary);
-      color:var(--color-text-inverse);
-      border-color:var(--color-primary);
+    .lang-btn.active {
+      background: var(--color-primary);
+      color: var(--color-text-inverse);
+      border-color: var(--color-primary);
     }
 
-    .hero{
-      display:grid;
-      grid-template-columns:1.15fr .85fr;
-      gap:var(--space-8);
-      align-items:stretch;
-      padding:var(--space-8) 0 var(--space-10);
+    .hero {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: var(--space-8);
+      align-items: stretch;
+      padding: var(--space-8) 0 var(--space-10);
     }
 
     .hero-copy,
@@ -194,387 +198,359 @@
     .contact-card,
     .kpi-card,
     .panel,
-    .consulting-wrapper{
-      background:var(--color-surface);
-      border:1px solid var(--color-border);
-      border-radius:var(--radius-xl);
-      box-shadow:var(--shadow-md);
+    .consulting-wrapper {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-md);
     }
 
-    .hero-copy{
-      padding:var(--space-8);
+    .hero-copy {
+      padding: var(--space-8);
     }
 
-    .eyebrow{
-      display:inline-flex;
-      align-items:center;
-      gap:var(--space-2);
-      padding:var(--space-2) var(--space-4);
-      border-radius:var(--radius-full);
-      background:var(--color-primary-soft);
-      color:var(--color-primary);
-      font-size:var(--text-xs);
-      font-weight:700;
-      letter-spacing:.08em;
-      text-transform:uppercase;
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-2) var(--space-4);
+      border-radius: var(--radius-full);
+      background: var(--color-primary-soft);
+      color: var(--color-primary);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
-    h1{
-      font-size:var(--text-2xl);
-      line-height:1.02;
-      margin-top:var(--space-6);
-      text-align:center;
+    h1 {
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      line-height: 1.05;
+      margin-top: var(--space-6);
     }
 
-    .headline{
-      font-size:var(--text-lg);
-      color:var(--color-text-muted);
-      margin-top:var(--space-4);
-      text-align:justify;
+    .headline {
+      font-size: var(--text-lg);
+      color: var(--color-text-muted);
+      margin-top: var(--space-4);
+      text-align: justify;
     }
 
-    .intro{
-      margin-top:var(--space-5);
-      text-align:justify;
+    .intro {
+      margin-top: var(--space-5);
+      text-align: justify;
     }
 
-    .meta{
-      display:flex;
-      flex-wrap:wrap;
-      gap:var(--space-3);
-      margin-top:var(--space-6);
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-3);
+      margin-top: var(--space-6);
     }
 
-    .chip{
-      padding:var(--space-2) var(--space-4);
-      border-radius:var(--radius-full);
-      background:var(--color-surface-2);
-      border:1px solid var(--color-border);
-      font-size:var(--text-sm);
+    .chip {
+      padding: var(--space-2) var(--space-4);
+      border-radius: var(--radius-full);
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      font-size: var(--text-sm);
     }
 
-    .hero-side{
-      display:grid;
-      gap:var(--space-4);
+    .hero-side {
+      display: grid;
+      gap: var(--space-4);
     }
 
-    .photo-card{
-      padding:var(--space-5);
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-    }
-
-    .photo-frame{
-      width:200px;
-      height:250px;
-      border-radius:calc(var(--radius-xl) - var(--space-3));
-      overflow:hidden;
-      background:var(--color-surface-2);
-      border:1px solid var(--color-border);
-      position:relative;
-    }
-
-    .photo-frame::before{
-      content:'';
-      position:absolute;
-      inset:12px;
-      border-radius:24px;
-      border:1px solid rgba(255,255,255,.25);
-      pointer-events:none;
-      z-index:2;
-    }
-
-    .photo-frame img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-    }
-
-    .photo-note{
-      margin-top:var(--space-4);
-      color:var(--color-text-muted);
-      font-size:var(--text-sm);
-    }
-
+    .photo-card,
     .contact-card,
-    .kpi-card{
-      padding:var(--space-5);
+    .kpi-card {
+      padding: var(--space-5);
     }
 
-    .section-title{
-      font-size:var(--text-xs);
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      color:var(--color-primary);
-      font-weight:800;
-      margin-bottom:var(--space-3);
+    .photo-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    .metric{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:var(--space-3);
+    .photo-frame {
+      width: 200px;
+      height: 250px;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      display: grid;
+      place-items: center;
     }
 
-    .metric div{
-      padding:var(--space-4);
-      border-radius:var(--radius-lg);
-      background:var(--color-surface-2);
-      border:1px solid var(--color-border);
+    .photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
-    .metric strong{
-      display:block;
-      font-size:var(--text-xl);
+    .photo-placeholder {
+      font-size: 4rem;
+      color: var(--color-primary);
+      font-weight: 900;
     }
 
-    .metric span{
-      display:block;
-      color:var(--color-text-muted);
-      font-size:var(--text-sm);
+    .photo-note {
+      margin-top: var(--space-4);
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
     }
 
-    .contact-list{
-      display:grid;
-      gap:var(--space-3);
+    .section-title {
+      font-size: var(--text-xs);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      font-weight: 800;
+      margin-bottom: var(--space-3);
     }
 
-    .contact-list a:hover{
-      color:var(--color-primary);
+    .metric {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-3);
     }
 
-    .whatsapp-btn{
-      display:inline-flex;
-      align-items:center;
-      gap:var(--space-2);
-      padding:var(--space-2) var(--space-4);
-      background:#25D366;
-      color:#fff !important;
-      border-radius:var(--radius-full);
-      font-size:var(--text-sm);
-      font-weight:700;
-      width:fit-content;
+    .metric div {
+      padding: var(--space-4);
+      border-radius: var(--radius-lg);
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
     }
 
-    .whatsapp-btn:hover{
-      background:#1ebe5d;
+    .metric strong {
+      display: block;
+      font-size: var(--text-xl);
     }
 
-    .consulting-wrapper{
-      padding:var(--space-8);
-      margin-bottom:var(--space-8);
-      border:2px solid
-        color-mix(
-          in srgb,
-          var(--color-primary) 45%,
-          var(--color-border)
-        );
+    .metric span {
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-6);
+      padding-bottom: var(--space-8);
+    }
+
+    .panel {
+      padding: var(--space-6);
+    }
+
+    .panel h2,
+    .consulting-wrapper h2 {
+      font-size: var(--text-xl);
+      margin-bottom: var(--space-4);
+    }
+
+    .timeline {
+      display: grid;
+      gap: var(--space-5);
+    }
+
+    .job {
+      padding-bottom: var(--space-5);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .job:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .job-top {
+      display: flex;
+      justify-content: space-between;
+      gap: var(--space-4);
+      flex-wrap: wrap;
+      margin-bottom: var(--space-2);
+    }
+
+    .job-role {
+      font-weight: 900;
+    }
+
+    .job-meta {
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+    }
+
+    .job p {
+      text-align: justify;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+    }
+
+    .skills span {
+      padding: var(--space-2) var(--space-3);
+      font-size: var(--text-sm);
+      border-radius: var(--radius-full);
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+    }
+
+    .edu-list,
+    .cert-list,
+    .contact-list {
+      display: grid;
+      gap: var(--space-3);
+    }
+
+    .consulting-wrapper {
+      padding: var(--space-8);
+      margin-bottom: var(--space-8);
+      border: 2px solid color-mix(in srgb, var(--color-primary) 45%, var(--color-border));
       background:
         linear-gradient(
           135deg,
-          color-mix(
-            in srgb,
-            var(--color-primary-soft) 42%,
-            var(--color-surface)
-          ),
+          color-mix(in srgb, var(--color-primary-soft) 42%, var(--color-surface)),
           var(--color-surface)
         );
     }
 
-    .consulting-wrapper h2,
-    .panel h2{
-      font-size:var(--text-xl);
-      margin-bottom:var(--space-4);
+    .consulting-intro {
+      max-width: 850px;
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-6);
+      text-align: justify;
     }
 
-    .consulting-intro{
-      max-width:900px;
-      color:var(--color-text-muted);
-      margin-bottom:var(--space-6);
-      text-align:justify;
+    .consulting-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-5);
     }
 
-    .consulting-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:var(--space-5);
+    .consulting-card {
+      padding: var(--space-6);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      transition: transform var(--transition), box-shadow var(--transition);
     }
 
-    .consulting-card{
-      padding:var(--space-6);
-      background:var(--color-surface);
-      border:1px solid var(--color-border);
-      border-radius:var(--radius-lg);
-      transition:
-        transform var(--transition),
-        box-shadow var(--transition);
+    .consulting-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
     }
 
-    .consulting-card:hover{
-      transform:translateY(-4px);
-      box-shadow:var(--shadow-md);
+    .consulting-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: var(--color-primary-soft);
+      color: var(--color-primary);
+      font-weight: 900;
+      margin-bottom: var(--space-4);
     }
 
-    .consulting-icon{
-      width:48px;
-      height:48px;
-      border-radius:14px;
-      display:grid;
-      place-items:center;
-      background:var(--color-primary-soft);
-      color:var(--color-primary);
-      font-weight:900;
-      margin-bottom:var(--space-4);
+    .consulting-card h3 {
+      font-size: var(--text-lg);
+      margin-bottom: var(--space-3);
     }
 
-    .consulting-card h3{
-      font-size:var(--text-lg);
-      margin-bottom:var(--space-3);
+    .consulting-card p {
+      color: var(--color-text-muted);
+      text-align: justify;
     }
 
-    .consulting-card p{
-      color:var(--color-text-muted);
-      text-align:justify;
+    .consulting-card ul {
+      margin-top: var(--space-4);
+      padding-left: 1.2rem;
     }
 
-    .consulting-card ul{
-      margin-top:var(--space-4);
-      padding-left:1.2rem;
+    .consulting-card li {
+      margin-bottom: var(--space-2);
     }
 
-    .consulting-card li{
-      margin-bottom:var(--space-2);
+    .cta-box {
+      margin-top: var(--space-6);
+      padding: var(--space-5);
+      border-radius: var(--radius-lg);
+      background: var(--color-primary);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      gap: var(--space-4);
+      align-items: center;
+      flex-wrap: wrap;
     }
 
-    .cta-box{
-      margin-top:var(--space-6);
-      padding:var(--space-5);
-      border-radius:var(--radius-lg);
-      background:var(--color-primary);
-      color:white;
-      display:flex;
-      justify-content:space-between;
-      gap:var(--space-4);
-      align-items:center;
-      flex-wrap:wrap;
+    .cta-button {
+      padding: var(--space-3) var(--space-5);
+      background: white;
+      color: var(--color-primary);
+      border-radius: var(--radius-full);
+      font-weight: 800;
     }
 
-    .cta-button{
-      padding:var(--space-3) var(--space-5);
-      background:white;
-      color:var(--color-primary);
-      border-radius:var(--radius-full);
-      font-weight:800;
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-2) var(--space-4);
+      background-color: #25d366;
+      color: #ffffff !important;
+      border-radius: var(--radius-full);
+      font-size: var(--text-sm);
+      font-weight: 700;
+      width: fit-content;
     }
 
-    .section-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:var(--space-6);
-      padding-bottom:var(--space-8);
+    .footer {
+      padding: var(--space-8) 0 var(--space-4);
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+      text-align: center;
     }
 
-    .panel{
-      padding:var(--space-6);
-    }
-
-    .timeline{
-      display:grid;
-      gap:var(--space-5);
-    }
-
-    .job{
-      padding-bottom:var(--space-5);
-      border-bottom:1px solid var(--color-border);
-    }
-
-    .job:last-child{
-      border-bottom:0;
-      padding-bottom:0;
-    }
-
-    .job-top{
-      display:flex;
-      justify-content:space-between;
-      gap:var(--space-4);
-      flex-wrap:wrap;
-      margin-bottom:var(--space-2);
-    }
-
-    .job-role{
-      font-weight:900;
-    }
-
-    .job-meta{
-      color:var(--color-text-muted);
-      font-size:var(--text-sm);
-    }
-
-    .job p,
-    .panel-copy{
-      text-align:justify;
-    }
-
-    .skills{
-      display:flex;
-      flex-wrap:wrap;
-      gap:var(--space-2);
-    }
-
-    .skills span{
-      padding:var(--space-2) var(--space-3);
-      font-size:var(--text-sm);
-      border-radius:var(--radius-full);
-      background:var(--color-surface-2);
-      border:1px solid var(--color-border);
-    }
-
-    .edu-list,
-    .cert-list{
-      display:grid;
-      gap:var(--space-3);
-    }
-
-    .footer{
-      padding:var(--space-8) 0 var(--space-4);
-      color:var(--color-text-muted);
-      font-size:var(--text-sm);
-      text-align:center;
-    }
-
-    @media(max-width:980px){
+    @media (max-width: 980px) {
       .hero,
-      .section-grid{
-        grid-template-columns:1fr;
+      .section-grid {
+        grid-template-columns: 1fr;
       }
 
-      .consulting-grid{
-        grid-template-columns:1fr;
+      .consulting-grid {
+        grid-template-columns: 1fr;
       }
 
-      .metric{
-        grid-template-columns:1fr;
+      .metric {
+        grid-template-columns: 1fr;
       }
     }
 
-    @media(max-width:640px){
-      .page{
-        padding:var(--space-4);
+    @media (max-width: 640px) {
+      .page {
+        padding: var(--space-4);
       }
 
-      .topbar{
-        align-items:flex-start;
-        flex-direction:column;
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
       }
 
-      .controls{
-        width:100%;
+      .controls {
+        width: 100%;
       }
 
       .control-btn,
-      .lang-btn{
-        flex:1;
+      .lang-btn {
+        flex: 1;
       }
 
       .hero-copy,
@@ -582,180 +558,112 @@
       .photo-card,
       .contact-card,
       .kpi-card,
-      .consulting-wrapper{
-        padding:var(--space-5);
-      }
-
-      h1{
-        font-size:2rem;
+      .consulting-wrapper {
+        padding: var(--space-5);
       }
     }
   </style>
 </head>
 
 <body>
-
   <div class="page">
 
-    <header class="topbar" id="topbar">
-
+    <header class="topbar">
       <div class="brand">
-
-        <div class="logo" aria-hidden="true">
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2.2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M4 18L10 6l3.4 7"></path>
-            <path d="M12.5 13h7.5"></path>
-            <path d="M15.5 8h4.5"></path>
-          </svg>
-        </div>
+        <div class="logo">AF</div>
 
         <div class="brand-text">
           <strong>Arturo Fuentes Coria</strong>
-          <span data-i18n="brandRole"></span>
+          <span data-i18n="brandRole">© 2026 | Estrategia, ejecución y resultados.</span>
         </div>
-
       </div>
 
-      <div class="controls" id="controls">
-
-        <button
-          class="lang-btn active"
-          data-lang="es"
-          aria-pressed="true"
-        >
-          ES
-        </button>
-
-        <button
-          class="lang-btn"
-          data-lang="en"
-          aria-pressed="false"
-        >
-          EN
-        </button>
-
-        <button
-          class="lang-btn"
-          data-lang="zh"
-          aria-pressed="false"
-        >
-          中文
-        </button>
-
-        <button
-          class="control-btn"
-          data-theme-toggle
-        >
-          ◐
-        </button>
-
+      <div class="controls">
+        <button class="lang-btn active" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="zh">中文</button>
+        <button class="control-btn" id="themeToggle">◐</button>
       </div>
-
     </header>
 
-    <main id="contenido">
+    <main>
 
+      <!-- HERO -->
       <section class="hero">
 
         <article class="hero-copy">
-
-          <div
-            class="eyebrow"
-            data-i18n="eyebrow"
-          ></div>
-
-          <h1>
-            Arturo Fuentes Coria
-          </h1>
-
-          <p
-            class="headline"
-            data-i18n="headline"
-          ></p>
-
-          <p
-            class="intro"
-            data-i18n="summary"
-          ></p>
-
-          <div class="meta">
-
-            <span
-              class="chip"
-              data-i18n="location"
-            ></span>
-
-            <span
-              class="chip"
-              data-i18n="languages"
-            ></span>
-
-            <span
-              class="chip"
-              data-i18n="focus"
-            ></span>
-
+          <div class="eyebrow" data-i18n="eyebrow">
+            Operaciones Comerciales · Retail · Business Development · Data Analytics & BI
           </div>
 
+          <h1>Arturo Fuentes Coria</h1>
+
+          <p class="headline" data-i18n="headline">
+            Profesional con más de 10 años de experiencia en retail,
+            telecomunicaciones, operaciones comerciales, desarrollo de mercado,
+            gestión territorial y liderazgo de equipos.
+          </p>
+
+          <p class="intro" data-i18n="summary">
+            Experiencia en Sell In, Sell Out, Trade Marketing, ejecución en punto
+            de venta, gestión de distribuidores, cuentas clave, KPIs, forecast,
+            inventarios, dashboards y Business Intelligence. Perfil híbrido que
+            integra experiencia operativa y comercial en campo con formación en
+            Data Analytics, Inteligencia Artificial, Prompt Engineering, Machine
+            Learning y Ciberseguridad. Orientado al crecimiento de ingresos,
+            expansión territorial, optimización de procesos y toma de decisiones
+            basada en datos.
+          </p>
+
+          <div class="meta">
+            <span class="chip">Xalapa, Veracruz, México</span>
+            <span class="chip">Español Nativo · Inglés B1–B2</span>
+            <span class="chip">Presencial · Híbrido · Remoto</span>
+          </div>
         </article>
 
         <aside class="hero-side">
 
           <section class="photo-card">
-
-            <div
-              class="section-title"
-              data-i18n="photoTitle"
-            ></div>
+            <div class="section-title">Perfil profesional</div>
 
             <div class="photo-frame">
-
-              <img
-                id="profilePhoto"
-                alt="Arturo Fuentes Coria"
-              />
-
+              <!--
+              Si ya tienes tu foto en GitHub cambia lo siguiente por:
+              <img src="foto.jpg" alt="Arturo Fuentes Coria">
+              -->
+              <div class="photo-placeholder">AF</div>
             </div>
 
-            <div class="photo-note">
-              Arturo Fuentes Coria
-            </div>
-
+            <div class="photo-note">Arturo Fuentes Coria</div>
           </section>
 
           <section class="kpi-card">
+            <div class="section-title">Impacto profesional</div>
 
-            <div
-              class="section-title"
-              data-i18n="impactTitle"
-            ></div>
+            <div class="metric">
+              <div>
+                <strong>+10</strong>
+                <span>Años de experiencia</span>
+              </div>
 
-            <div
-              class="metric"
-              id="metrics"
-            ></div>
+              <div>
+                <strong>5</strong>
+                <span>Estados gestionados</span>
+              </div>
 
+              <div>
+                <strong>780+</strong>
+                <span>Puntos de venta</span>
+              </div>
+            </div>
           </section>
 
           <section class="contact-card">
-
-            <div
-              class="section-title"
-              data-i18n="contactTitle"
-            ></div>
+            <div class="section-title">Contacto</div>
 
             <div class="contact-list">
-
-              <a href="mailto:arturofc@icloud.com">
-                arturofc@icloud.com
-              </a>
+              <a href="mailto:arturofc@icloud.com">arturofc@icloud.com</a>
 
               <a href="tel:+525586399463">
                 +52 55 86 399 463
@@ -777,48 +685,128 @@
               >
                 WhatsApp
               </a>
-
             </div>
-
           </section>
 
         </aside>
-
       </section>
 
+      <!-- CONSULTORÍA -->
       <section class="consulting-wrapper">
 
-        <div
-          class="section-title"
-          data-i18n="consultingLabel"
-        ></div>
+        <div class="section-title" data-i18n="consultingLabel">
+          Servicios profesionales
+        </div>
 
-        <h2
-          data-i18n="consultingTitle"
-        ></h2>
+        <h2 data-i18n="consultingTitle">
+          Consultoría
+        </h2>
 
-        <p
-          class="consulting-intro"
-          data-i18n="consultingIntro"
-        ></p>
+        <p class="consulting-intro" data-i18n="consultingIntro">
+          Servicios de consultoría dirigidos a empresas, emprendimientos,
+          organizaciones y proyectos que requieren fortalecer su estrategia
+          comercial, optimizar operaciones o estructurar iniciativas sociales
+          mediante análisis, planeación, indicadores y toma de decisiones basada
+          en información.
+        </p>
 
-        <div
-          class="consulting-grid"
-          id="consultingGrid"
-        ></div>
+        <div class="consulting-grid">
+
+          <!-- CONSULTORÍA COMERCIAL -->
+          <article class="consulting-card">
+            <div class="consulting-icon">01</div>
+
+            <h3 data-i18n="commercialTitle">
+              Consultoría Comercial
+            </h3>
+
+            <p data-i18n="commercialText">
+              Diagnóstico y diseño de estrategias orientadas al crecimiento de
+              ventas, desarrollo de mercado, expansión territorial y mejora de la
+              ejecución comercial.
+            </p>
+
+            <ul>
+              <li>Sell In y Sell Out</li>
+              <li>Business Development</li>
+              <li>Trade Marketing</li>
+              <li>Gestión de distribuidores</li>
+              <li>Key Account Management</li>
+              <li>Expansión territorial</li>
+              <li>KPIs comerciales</li>
+              <li>Forecast e inventarios</li>
+              <li>Revenue Growth</li>
+              <li>Dashboards comerciales</li>
+            </ul>
+          </article>
+
+          <!-- CONSULTORÍA OPERATIVA -->
+          <article class="consulting-card">
+            <div class="consulting-icon">02</div>
+
+            <h3 data-i18n="operationsTitle">
+              Consultoría de Operaciones
+            </h3>
+
+            <p data-i18n="operationsText">
+              Evaluación y optimización de procesos comerciales y operativos,
+              productividad de equipos, cobertura territorial y seguimiento de
+              indicadores para mejorar eficiencia y resultados.
+            </p>
+
+            <ul>
+              <li>Diagnóstico operativo</li>
+              <li>Diseño de procesos</li>
+              <li>Retail Operations</li>
+              <li>Field Operations</li>
+              <li>Sales Operations</li>
+              <li>Productividad de equipos</li>
+              <li>Control de ejecución</li>
+              <li>Análisis de KPIs</li>
+              <li>Business Intelligence</li>
+              <li>Mejora continua</li>
+            </ul>
+          </article>
+
+          <!-- CONSULTORÍA POLÍTICAS Y PROYECTOS -->
+          <article class="consulting-card">
+            <div class="consulting-icon">03</div>
+
+            <h3 data-i18n="projectsTitle">
+              Consultoría en Políticas y Proyectos
+            </h3>
+
+            <p data-i18n="projectsText">
+              Apoyo en diagnóstico, diseño, estructuración, seguimiento y
+              evaluación de programas, proyectos sociales e iniciativas con
+              enfoque territorial y orientación a resultados.
+            </p>
+
+            <ul>
+              <li>Diagnóstico social</li>
+              <li>Diseño de proyectos</li>
+              <li>Planeación estratégica</li>
+              <li>Árbol de problemas y objetivos</li>
+              <li>Marco lógico</li>
+              <li>Indicadores</li>
+              <li>Evaluación de proyectos</li>
+              <li>Seguimiento de resultados</li>
+              <li>Análisis territorial</li>
+              <li>Investigación documental</li>
+            </ul>
+          </article>
+
+        </div>
 
         <div class="cta-box">
-
           <div>
+            <strong data-i18n="ctaTitle">
+              ¿Tu empresa u organización requiere apoyo especializado?
+            </strong>
 
-            <strong
-              data-i18n="ctaTitle"
-            ></strong>
-
-            <div
-              data-i18n="ctaText"
-            ></div>
-
+            <div data-i18n="ctaText">
+              Podemos revisar tu situación actual y definir una propuesta de trabajo.
+            </div>
           </div>
 
           <a
@@ -827,470 +815,415 @@
             target="_blank"
             rel="noopener"
             data-i18n="ctaButton"
-          ></a>
-
+          >
+            Solicitar consulta
+          </a>
         </div>
 
       </section>
 
+      <!-- EXPERIENCIA -->
       <section class="section-grid">
 
         <article class="panel">
 
-          <div
-            class="section-title"
-            data-i18n="expLabel"
-          ></div>
+          <div class="section-title" data-i18n="expLabel">
+            Experiencia
+          </div>
 
-          <h2
-            data-i18n="expTitle"
-          ></h2>
+          <h2 data-i18n="expTitle">
+            Experiencia profesional
+          </h2>
 
-          <div
-            class="timeline"
-            id="experience"
-          ></div>
+          <div class="timeline">
 
+            <!-- REALME -->
+            <div class="job">
+              <div class="job-top">
+                <div>
+                  <div class="job-role">
+                    Key Account Manager R7 · Realme
+                  </div>
+
+                  <div class="job-meta">
+                    Ene 2026 – Presente
+                  </div>
+                </div>
+
+                <div class="job-meta">
+                  México
+                </div>
+              </div>
+
+              <p>
+                Lidero la operación comercial regional en cinco estados,
+                gestionando distribuidores, retail partners y equipos de campo
+                para fortalecer cobertura, ejecución y cumplimiento de objetivos.
+                Desarrollo estrategias de Sell In, Sell Out, expansión territorial
+                y gestión de cuentas clave, identificando oportunidades de
+                crecimiento por cliente y mercado. Analizo KPIs, forecast,
+                inventarios, rotación y desempeño comercial para optimizar
+                decisiones, recursos y resultados regionales.
+              </p>
+            </div>
+
+            <!-- TECNO -->
+            <div class="job">
+              <div class="job-top">
+                <div>
+                  <div class="job-role">
+                    Regional Manager R7 · TECNO Mobile
+                  </div>
+
+                  <div class="job-meta">
+                    Ago 2023 – Dic 2025
+                  </div>
+                </div>
+
+                <div class="job-meta">
+                  Veracruz · Puebla · Tlaxcala · Guerrero · Oaxaca
+                </div>
+              </div>
+
+              <p>
+                Lideré la operación regional en cinco estados, coordinando
+                10 City Managers, más de 200 promotores y más de 780 puntos de
+                venta. Gestioné más de 100 distribuidores y 6 mayoristas,
+                impulsando estrategias de Sell In, Sell Out, expansión territorial
+                y desarrollo de mercado. Alcancé mejoras de +14% en Sell Out,
+                +17% en cobertura y 93% de precisión en forecast mediante
+                seguimiento de KPIs y ejecución comercial.
+              </p>
+            </div>
+
+            <!-- OPPO -->
+            <div class="job">
+              <div class="job-top">
+                <div>
+                  <div class="job-role">
+                    Retail Manager R7E · OPPO Mobile
+                  </div>
+
+                  <div class="job-meta">
+                    Sep 2020 – Ago 2023
+                  </div>
+                </div>
+
+                <div class="job-meta">
+                  México
+                </div>
+              </div>
+
+              <p>
+                Dirigí operaciones de retail, ejecución comercial y equipos de
+                campo, asegurando productividad, cobertura y desempeño en punto
+                de venta. Diseñé estrategias de Trade Marketing, desarrollo de
+                mercado y mejora de procesos, apoyadas en KPIs, ventas,
+                inventarios y análisis comercial. Implementé dashboards y
+                Business Intelligence para identificar tendencias, oportunidades
+                de crecimiento y fortalecer la toma de decisiones basada en datos.
+              </p>
+            </div>
+
+          </div>
         </article>
 
+        <!-- HABILIDADES -->
         <article class="panel">
+          <div class="section-title">
+            Competencias
+          </div>
 
-          <div
-            class="section-title"
-            data-i18n="skillsLabel"
-          ></div>
+          <h2>
+            Habilidades clave
+          </h2>
 
-          <h2
-            data-i18n="skillsTitle"
-          ></h2>
-
-          <div
-            class="skills"
-            id="skills"
-          ></div>
-
+          <div class="skills">
+            <span>Operaciones Comerciales</span>
+            <span>Retail</span>
+            <span>Business Development</span>
+            <span>Trade Marketing</span>
+            <span>Key Account Management</span>
+            <span>Sell In</span>
+            <span>Sell Out</span>
+            <span>Forecast</span>
+            <span>KPIs</span>
+            <span>Gestión de Distribuidores</span>
+            <span>Expansión Territorial</span>
+            <span>Data Analytics</span>
+            <span>Business Intelligence</span>
+            <span>Power BI</span>
+            <span>Excel Avanzado</span>
+            <span>IA Aplicada</span>
+            <span>Liderazgo</span>
+            <span>Negociación</span>
+          </div>
         </article>
 
+        <!-- FORMACIÓN -->
         <article class="panel">
+          <div class="section-title">
+            Formación
+          </div>
 
-          <div
-            class="section-title"
-            data-i18n="eduLabel"
-          ></div>
+          <h2>
+            Formación académica
+          </h2>
 
-          <h2
-            data-i18n="eduTitle"
-          ></h2>
+          <div class="edu-list">
+            <div>
+              <strong>Licenciatura en Políticas y Proyectos Sociales</strong>
+              <br />
+              Universidad Abierta y a Distancia de México · En curso
+            </div>
 
-          <div
-            class="edu-list"
-            id="education"
-          ></div>
+            <div>
+              <strong>Ingeniería Industrial</strong>
+              <br />
+              Universidad Popular Autónoma de Veracruz
+            </div>
 
+            <div>
+              <strong>Contaduría Pública</strong>
+              <br />
+              Universidad del Golfo de México Norte
+            </div>
+          </div>
         </article>
 
+        <!-- CERTIFICACIONES -->
         <article class="panel">
+          <div class="section-title">
+            Credenciales
+          </div>
 
-          <div
-            class="section-title"
-            data-i18n="certLabel"
-          ></div>
+          <h2>
+            Certificaciones y formación
+          </h2>
 
-          <h2
-            data-i18n="certTitle"
-          ></h2>
-
-          <div
-            class="cert-list"
-            id="certifications"
-          ></div>
-
+          <div class="cert-list">
+            <div>Google Project Management</div>
+            <div>AWS Cloud Operations</div>
+            <div>Data Analytics & Business Intelligence</div>
+            <div>Inteligencia Artificial</div>
+            <div>Prompt Engineering</div>
+            <div>Machine Learning</div>
+            <div>Ciberseguridad Cisco</div>
+            <div>Six Sigma</div>
+          </div>
         </article>
 
+        <!-- DISPONIBILIDAD -->
         <article class="panel">
+          <div class="section-title">
+            Disponibilidad
+          </div>
 
-          <div
-            class="section-title"
-            data-i18n="availabilityLabel"
-          ></div>
+          <h2>
+            Modalidad e interés
+          </h2>
 
-          <h2
-            data-i18n="availabilityTitle"
-          ></h2>
-
-          <p
-            class="panel-copy"
-            data-i18n="availabilityText"
-          ></p>
-
-        </article>
-
-        <article class="panel">
-
-          <div
-            class="section-title"
-            data-i18n="valueLabel"
-          ></div>
-
-          <h2
-            data-i18n="valueTitle"
-          ></h2>
-
-          <p
-            class="panel-copy"
-            data-i18n="valueText"
-          ></p>
-
+          <p style="text-align: justify;">
+            Disponible para posiciones presenciales, híbridas o remotas, con
+            apertura a cambio de residencia. Interés en posiciones relacionadas
+            con operaciones comerciales, retail, business development, key
+            account management, data analytics, Business Intelligence y
+            transformación digital.
+          </p>
         </article>
 
       </section>
 
     </main>
 
-    <footer
-      class="footer"
-      data-i18n="footer"
-    ></footer>
+    <footer class="footer">
+      © 2026 Arturo Fuentes Coria | Estrategia, ejecución y resultados.
+    </footer>
 
   </div>
 
   <script>
-
-    /*
-    ==========================================================
-    FOTOGRAFÍA ORIGINAL INCRUSTADA
-    ==========================================================
-    */
-
-    const PHOTO_BASE64 =
-      'UklGRv4GAABXRUJQVlA4IPIGAABwQgCdASrwAAQBPu10tFIppzWvp3W5mrAdiWdu4PSW7lbzGAr3LHxn26hlj4z116RcsfGbxnh/dIC76Z/8Y3LNGgKygDcl9M3wEyuikDckBrxgKVwBIZMgcR69MCZJOkQkR6qckoX0y1v5eA/YTWZoZsI9/hiT9iZ+GCy+tYtQJldGxcMUfSJOrMWpfwqIIR+oXgJ7JtvIxn46a0Qb/OydAj9WQ0hPr4f6C4C1Zj6FyzsaYUZSAXiCHyjfMzH+l67DuZGWWqv8dOycTmLRb593lFf33zhgnTHYg5NGTmiG3XYrjkeakhk4LI0Q7Z6i6UgRJoejlz25tjTHPImpFLBZUzTdZW7uCegqjSWSir4bKDb7hui7RD6ep3g6//GBbuucwXv9UAa+S9RV5qxqFCo7f6dnVcuJ09nM5XjxKsJyv4lF62NPLuVzTqYgTeB6PaNeJsrTyu3/jF2CLrtWWO65J9zcCoxsCYNcAc6MRx0w4bRQfgsHUPhqnlcZdDZdSL8Z18GgphoBjrgwR6iDQSg0Dp5TBnyr6TbR40OrzN51eQFFzRcRc5fUEVBFXBNcjbxTIEkZL3nKjM8Sl2ELxrzROm0kZL5OqMZGTLWy2CZYxQ/pHxqSQEDeX0PMU3kIypurnuIDKinbmZtrLm9gLMA035Khplx9vx6LK0sDv/0z50kg8LLkCzOxXndalcBUZAx6QXh2okoK6CQ3uAAA/oYA3AD1y7YseHBCr4MSGN2taN9l/wAAAAIrNz5p+c8FMyf+LbTrPPO2d7ffwfky9UtaCLRwNBv69QvjSXgzb7Rb/a/d+8G6d+UmLpFxHxvBCRppgv6AUnavhJHNR6+umHbnOs6vzJRSwrgTY7CYDoqdJanxBcitSQ/M7nvKXpfYma/OPFj/9ewICo5jfjtRCfMEOAQoxpOtoaAj+Nay/t4lAs2Aa1XlbKIshF28oAWlSIaKhMyg89Cp2gNHtBg7BTvgwLnxAYbiP+HtqLKVnhii96Ol2unCWoIo8ZtwmXTsnrz4OwIQYjuHmr1Lbq4WpgkQR9NSA5d9hBv9kXbWUxmAm4rXs89EuriaHqYjO4gwa2M2Ul4+rWkQrMN8FoXHU8niwA60FXT4tymtlvyFMUxLT0k1DcYQ19DTfNKG4bccCJBoT8yARrAyglN9+ZMWCeJ/hAYjRgJ/c9ldnYZY/RW3JWF59l+YeBNU0e7YDjjdaeBi0Vvx4dMJBvLYzTt8MwODlq9P0UeeDjK6gK/KHNgRIJa27v05TOBBY/+DOSy2JHyMnIUsrtHtK1xoimDYCV1nUUzA8woocNO1aYeScIIhauYxCyi5VvEBLtWA0fzS7S4RurcU6IAY9Gc9ri1Xh+9+wrOlnIyPdocqWQpTTFSqp2H4DNiM7rjrHNCaNxSVFeiDdZYJe4W5bFlCJXxO8abY2WjhTeXtQdWmqirbJzEuSrp6bko6H9Vq1brY1qWmHPEKeRmbCot1J3Nw4w6rmkbgXQS3PjYg4jgabKqmxGWcI+j49PbjwaIezhRFmH+pjyKUtpR4VhV7bhiUZPmiDQGf6PF7IsHD7CMs3TneouKWSjBKT1O3PVSYC881/LQU2dqdhS0bLWDjSz93bL/B9AF6HihbFsAEtCb0monTDDwJ4jiIYrOX1OnivQODIfKZMcVhUeqTRj0HXfmXtHoIb5bkH0Cpw9asmveBNSYr15PriqlEq11fEncwQIITsREsV6dHU8zqS9zzesJcbDGr42nbmbjG2IYWEi04KHNGtvzy2LKgxcJ3Un6zVZkmywv6pae/mZie6UL7kmcCxxhJ4VnXdYDK1fhjmkH7ahZE/plS16o0kuelzGoJcPYD4xC3vZOHnTmaobVtHzD/QcBjH3crpRsutm3IJkIUmcWZZT0EfOSiPFJRnn8FvBxYA6KsQfx37dirylPVV49ZZIVjHvbq5VlTutKeM01ez2mQhlizg5zGYcSeYLnC1Qr5sH2deNLXd4VslMsJqQu8qKJPCkWu4X0GNVbZpfJ5zFozQQGLroRhlhIqVyBXW8L5bIcud0TFkR7/Z+mOWy3GrjWLlXdNfbxzMXi8ILP8vYDx7o/046gfZcR8gDxmMwPG4fBz1k+eFSwyBvOaK1Rqw10JqtP+OMEBfU4gF1lF9tD3KMHVrO8WvAikXOe7suPwu26I3u4oVKRT9zWr8CyNJ908WWYIytL3gSkc+lgUxTGmeZSJRlk4H6HvHgZ5t9mY000OfSgc0Snwx4NauGxIU/6NYnXeFi6D0iXsnt5vJ81NO3IdaMijOO6ul4dT6SODZX6+KHuFEXTdITA72x5esfLwr5+roliF0jtXW2JFifdmrFeUJjTZxoC4jKmsdeKTyopOVy8YAA==';
-
-    document.getElementById(
-      'profilePhoto'
-    ).src =
-      'data:image/webp;base64,' +
-      PHOTO_BASE64;
-
-
-    /*
-    ==========================================================
-    TRADUCCIONES
-    ==========================================================
-    */
-
     const copy = {
-
-      /*
-      ========================================================
-      ESPAÑOL
-      ========================================================
-      */
-
       es: {
-
-        pageTitle:
-          'Arturo Fuentes Coria | CV y Consultoría',
-
-        metaDescription:
-          'CV profesional y servicios de consultoría comercial, operaciones, política y proyectos sociales de Arturo Fuentes Coria.',
-
-        brandRole:
-          '© 2026 | Estrategia, ejecución y resultados.',
-
+        brandRole: "© 2026 | Estrategia, ejecución y resultados.",
         eyebrow:
-          'Operaciones Comerciales · Retail · Business Development · Data Analytics & BI',
+          "Operaciones Comerciales · Retail · Business Development · Data Analytics & BI",
 
         headline:
-          'Profesional con más de 10 años de experiencia en retail, telecomunicaciones, operaciones comerciales, desarrollo de mercado, gestión territorial y liderazgo de equipos.',
+          "Profesional con más de 10 años de experiencia en retail, telecomunicaciones, operaciones comerciales, desarrollo de mercado, gestión territorial y liderazgo de equipos.",
 
         summary:
-          'Experiencia en Sell In, Sell Out, Trade Marketing, ejecución en punto de venta, gestión de distribuidores, cuentas clave, KPIs, forecast, inventarios, dashboards y Business Intelligence. Perfil híbrido que integra experiencia operativa y comercial en campo con formación en Data Analytics, Inteligencia Artificial, Prompt Engineering, Machine Learning y Ciberseguridad. Orientado al crecimiento de ingresos, expansión territorial, optimización de procesos y toma de decisiones basada en datos.',
+          "Experiencia en Sell In, Sell Out, Trade Marketing, ejecución en punto de venta, gestión de distribuidores, cuentas clave, KPIs, forecast, inventarios, dashboards y Business Intelligence. Perfil híbrido que integra experiencia operativa y comercial en campo con formación en Data Analytics, Inteligencia Artificial, Prompt Engineering, Machine Learning y Ciberseguridad. Orientado al crecimiento de ingresos, expansión territorial, optimización de procesos y toma de decisiones basada en datos.",
 
-        location:
-          'Xalapa, Veracruz, México',
-
-        languages:
-          'Español Nativo · Inglés Intermedio B1–B2',
-
-        focus:
-          'Presencial · Híbrido · Remoto · Apertura a cambio de residencia',
-
-        photoTitle:
-          'Fotografía profesional',
-
-        impactTitle:
-          'Impacto profesional',
-
-        contactTitle:
-          'Contacto',
-
-        metrics:[
-          [
-            '+10',
-            'Años de experiencia'
-          ],
-          [
-            '5',
-            'Estados gestionados'
-          ],
-          [
-            '780+',
-            'Puntos de venta'
-          ]
-        ],
-
-        consultingLabel:
-          'Servicios profesionales',
-
-        consultingTitle:
-          'Servicios de Consultoría',
+        consultingLabel: "Servicios profesionales",
+        consultingTitle: "Consultoría",
 
         consultingIntro:
-          'Servicios dirigidos a empresas, emprendimientos, organizaciones y proyectos que requieren fortalecer su estrategia comercial, optimizar operaciones o estructurar iniciativas sociales mediante diagnóstico, planeación, indicadores y toma de decisiones basada en información.',
+          "Servicios de consultoría dirigidos a empresas, emprendimientos, organizaciones y proyectos que requieren fortalecer su estrategia comercial, optimizar operaciones o estructurar iniciativas sociales mediante análisis, planeación, indicadores y toma de decisiones basada en información.",
 
-        consulting:[
+        commercialTitle: "Consultoría Comercial",
 
-          {
-            n:'01',
+        commercialText:
+          "Diagnóstico y diseño de estrategias orientadas al crecimiento de ventas, desarrollo de mercado, expansión territorial y mejora de la ejecución comercial.",
 
-            title:
-              'Consultoría Comercial',
+        operationsTitle: "Consultoría de Operaciones",
 
-            text:
-              'Diagnóstico y diseño de estrategias orientadas al crecimiento de ventas, desarrollo de mercado, expansión territorial y mejora de la ejecución comercial.',
+        operationsText:
+          "Evaluación y optimización de procesos comerciales y operativos, productividad de equipos, cobertura territorial y seguimiento de indicadores para mejorar eficiencia y resultados.",
 
-            items:[
-              'Sell In y Sell Out',
-              'Business Development',
-              'Trade Marketing',
-              'Gestión de distribuidores',
-              'Key Account Management',
-              'Expansión territorial',
-              'KPIs comerciales',
-              'Forecast e inventarios',
-              'Revenue Growth',
-              'Dashboards comerciales'
-            ]
-          },
+        projectsTitle: "Consultoría en Políticas y Proyectos",
 
-          {
-            n:'02',
-
-            title:
-              'Consultoría de Operaciones',
-
-            text:
-              'Evaluación y optimización de procesos comerciales y operativos, productividad de equipos, cobertura territorial y seguimiento de indicadores para mejorar eficiencia y resultados.',
-
-            items:[
-              'Diagnóstico operativo',
-              'Diseño y mejora de procesos',
-              'Retail Operations',
-              'Field Operations',
-              'Sales Operations',
-              'Productividad de equipos',
-              'Control de ejecución',
-              'Análisis de KPIs',
-              'Business Intelligence',
-              'Mejora continua'
-            ]
-          },
-
-          {
-            n:'03',
-
-            title:
-              'Consultoría y Política y Proyectos Sociales',
-
-            text:
-              'Apoyo en diagnóstico, diseño, estructuración, seguimiento y evaluación de políticas, programas, proyectos sociales e iniciativas con enfoque territorial y orientación a resultados.',
-
-            items:[
-              'Diagnóstico social',
-              'Política social',
-              'Diseño de proyectos sociales',
-              'Planeación estratégica',
-              'Árbol de problemas y objetivos',
-              'Marco lógico',
-              'Indicadores',
-              'Evaluación de proyectos',
-              'Seguimiento de resultados',
-              'Investigación documental'
-            ]
-          }
-
-        ],
+        projectsText:
+          "Apoyo en diagnóstico, diseño, estructuración, seguimiento y evaluación de programas, proyectos sociales e iniciativas con enfoque territorial y orientación a resultados.",
 
         ctaTitle:
-          '¿Tu empresa u organización requiere apoyo especializado?',
+          "¿Tu empresa u organización requiere apoyo especializado?",
 
         ctaText:
-          'Podemos revisar tu situación actual y definir una propuesta de trabajo.',
+          "Podemos revisar tu situación actual y definir una propuesta de trabajo.",
 
         ctaButton:
-          'Solicitar consulta',
+          "Solicitar consulta",
 
-        expLabel:
-          'Experiencia',
-
-        expTitle:
-          'Experiencia profesional',
-
-        experience:[
-
-          {
-            role:
-              'Key Account Manager R7 · Realme',
-
-            date:
-              'Ene 2026 – Presente',
-
-            place:
-              'México',
-
-            desc:
-              'Lidero la operación comercial regional en cinco estados, gestionando distribuidores, retail partners y equipos de campo para fortalecer cobertura, ejecución y cumplimiento de objetivos. Desarrollo estrategias de Sell In, Sell Out, expansión territorial y gestión de cuentas clave, identificando oportunidades de crecimiento por cliente y mercado. Analizo KPIs, forecast, inventarios, rotación y desempeño comercial para optimizar decisiones, recursos y resultados regionales.'
-          },
-
-          {
-            role:
-              'Regional Manager R7 · TECNO Mobile',
-
-            date:
-              'Ago 2023 – Dic 2025',
-
-            place:
-              'Veracruz · Puebla · Tlaxcala · Guerrero · Oaxaca',
-
-            desc:
-              'Lideré la operación regional en cinco estados, coordinando 10 City Managers, más de 200 promotores y más de 780 puntos de venta. Gestioné más de 100 distribuidores y 6 mayoristas, impulsando estrategias de Sell In, Sell Out, expansión territorial y desarrollo de mercado. Alcancé mejoras de +14% en Sell Out, +17% en cobertura y 93% de precisión en forecast mediante seguimiento de KPIs y ejecución comercial.'
-          },
-
-          {
-            role:
-              'Retail Manager R7E · OPPO Mobile',
-
-            date:
-              'Sep 2020 – Ago 2023',
-
-            place:
-              'México',
-
-            desc:
-              'Dirigí operaciones de retail, ejecución comercial y equipos de campo, asegurando productividad, cobertura y desempeño en punto de venta. Diseñé estrategias de Trade Marketing, desarrollo de mercado y mejora de procesos, apoyadas en KPIs, ventas, inventarios y análisis comercial. Implementé dashboards y Business Intelligence para identificar tendencias, oportunidades de crecimiento y fortalecer la toma de decisiones basada en datos.'
-          }
-
-        ],
-
-        skillsLabel:
-          'Competencias',
-
-        skillsTitle:
-          'Habilidades clave',
-
-        skills:[
-          'Operaciones Comerciales',
-          'Retail',
-          'Business Development',
-          'Trade Marketing',
-          'Key Account Management',
-          'Sell In',
-          'Sell Out',
-          'Forecast',
-          'KPIs',
-          'Gestión de Distribuidores',
-          'Expansión Territorial',
-          'Data Analytics',
-          'Business Intelligence',
-          'Power BI',
-          'Excel Avanzado',
-          'IA Aplicada',
-          'Liderazgo',
-          'Negociación'
-        ],
-
-        eduLabel:
-          'Formación',
-
-        eduTitle:
-          'Formación académica',
-
-        education:[
-          [
-            'Licenciatura en Políticas y Proyectos Sociales',
-            'Universidad Abierta y a Distancia de México · En curso'
-          ],
-          [
-            'Ingeniería Industrial',
-            'Universidad Popular Autónoma de Veracruz'
-          ],
-          [
-            'Contaduría Pública',
-            'Universidad del Golfo de México Norte'
-          ]
-        ],
-
-        certLabel:
-          'Credenciales',
-
-        certTitle:
-          'Certificaciones y formación complementaria',
-
-        certifications:[
-          'Google Project Management',
-          'AWS Cloud Operations',
-          'Data Analytics & Business Intelligence',
-          'Inteligencia Artificial',
-          'Prompt Engineering',
-          'Six Sigma'
-        ],
-
-        availabilityLabel:
-          'Disponibilidad',
-
-        availabilityTitle:
-          'Modalidad e interés',
-
-        availabilityText:
-          'Disponible para posiciones presenciales, híbridas o remotas, con apertura a cambio de residencia. Interés en posiciones relacionadas con operaciones comerciales, retail, business development, key account management, data analytics, Business Intelligence y transformación digital.',
-
-        valueLabel:
-          'Contacto',
-
-        valueTitle:
-          'Conversación profesional',
-
-        valueText:
-          'Estoy abierto a conversar sobre oportunidades laborales y proyectos de consultoría donde pueda combinar experiencia comercial, operaciones, análisis de datos y formación en políticas y proyectos sociales para generar resultados medibles.',
-
-        footer:
-          '© 2026 Arturo Fuentes Coria | Estrategia, ejecución y resultados.'
-
+        expLabel: "Experiencia",
+        expTitle: "Experiencia profesional"
       },
 
-
-      /*
-      ========================================================
-      ENGLISH
-      ========================================================
-      */
-
       en: {
-
-        pageTitle:
-          'Arturo Fuentes Coria | CV & Consulting',
-
-        metaDescription:
-          'Professional CV and consulting services in commercial strategy, operations, social policy and social projects by Arturo Fuentes Coria.',
-
-        brandRole:
-          '© 2026 | Strategy, execution and results.',
+        brandRole: "© 2026 | Strategy, execution and results.",
 
         eyebrow:
-          'Commercial Operations · Retail · Business Development · Data Analytics & BI',
+          "Commercial Operations · Retail · Business Development · Data Analytics & BI",
 
         headline:
-          'Professional with more than 10 years of experience in retail, telecommunications, commercial operations, market development, territory management and team leadership.',
+          "Professional with more than 10 years of experience in retail, telecommunications, commercial operations, market development, territory management and team leadership.",
 
         summary:
-          'Experience in Sell In, Sell Out, Trade Marketing, point-of-sale execution, distributor management, key accounts
+          "Experience in Sell In, Sell Out, Trade Marketing, point-of-sale execution, distributor management, key accounts, KPIs, forecasting, inventory, dashboards and Business Intelligence. Hybrid profile combining field commercial and operational experience with training in Data Analytics, Artificial Intelligence, Prompt Engineering, Machine Learning and Cybersecurity. Focused on revenue growth, territorial expansion, process optimization and data-driven decision-making.",
+
+        consultingLabel: "Professional services",
+        consultingTitle: "Consulting",
+
+        consultingIntro:
+          "Consulting services for companies, entrepreneurs, organizations and projects seeking to strengthen commercial strategy, optimize operations or structure social initiatives through analysis, planning, indicators and data-driven decision-making.",
+
+        commercialTitle: "Commercial Consulting",
+
+        commercialText:
+          "Diagnosis and design of strategies focused on sales growth, market development, territorial expansion and commercial execution improvement.",
+
+        operationsTitle: "Operations Consulting",
+
+        operationsText:
+          "Evaluation and optimization of commercial and operational processes, team productivity, territorial coverage and performance indicators.",
+
+        projectsTitle: "Policies & Projects Consulting",
+
+        projectsText:
+          "Support in diagnosis, design, structuring, monitoring and evaluation of programs, social projects and initiatives focused on measurable results.",
+
+        ctaTitle:
+          "Does your company or organization need specialized support?",
+
+        ctaText:
+          "We can review your current situation and define a tailored work proposal.",
+
+        ctaButton:
+          "Request consultation",
+
+        expLabel: "Experience",
+        expTitle: "Professional experience"
+      },
+
+      zh: {
+        brandRole: "© 2026 | 战略、执行与成果",
+
+        eyebrow:
+          "商业运营 · 零售管理 · 商务拓展 · 数据分析与商业智能",
+
+        headline:
+          "拥有十年以上零售、电信、商业运营、市场开发、区域管理及团队领导经验。",
+
+        summary:
+          "具备 Sell In、Sell Out、Trade Marketing、零售终端执行、经销商管理、重点客户管理、KPI、销售预测、库存管理、数据仪表板和商业智能经验。兼具一线商业运营经验与数据分析、人工智能、提示工程、机器学习及网络安全相关培训，专注于收入增长、区域扩张、流程优化及数据驱动决策。",
+
+        consultingLabel: "专业服务",
+        consultingTitle: "咨询服务",
+
+        consultingIntro:
+          "面向企业、创业者、机构及项目提供商业战略、运营优化及政策和项目规划咨询服务，通过分析、规划、指标管理及数据驱动决策提升执行效果。",
+
+        commercialTitle: "商业咨询",
+
+        commercialText:
+          "针对销售增长、市场开发、区域扩张、渠道管理及商业执行提供诊断与战略设计。",
+
+        operationsTitle: "运营咨询",
+
+        operationsText:
+          "评估并优化商业及运营流程、团队效率、区域覆盖及关键绩效指标。",
+
+        projectsTitle: "政策与项目咨询",
+
+        projectsText:
+          "支持社会项目、公共政策及相关计划的诊断、设计、规划、监测和评估。",
+
+        ctaTitle:
+          "您的企业或机构需要专业支持吗？",
+
+        ctaText:
+          "我们可以分析当前情况，并制定适合的合作方案。",
+
+        ctaButton:
+          "联系咨询",
+
+        expLabel: "工作经历",
+        expTitle: "专业经历"
+      }
+    };
+
+    const langButtons = document.querySelectorAll(".lang-btn");
+    const translatableElements = document.querySelectorAll("[data-i18n]");
+
+    function setLanguage(lang) {
+      translatableElements.forEach((element) => {
+        const key = element.dataset.i18n;
+
+        if (copy[lang] && copy[lang][key]) {
+          element.textContent = copy[lang][key];
+        }
+      });
+
+      langButtons.forEach((button) => {
+        button.classList.toggle(
+          "active",
+          button.dataset.lang === lang
+        );
+      });
+
+      document.documentElement.lang = lang;
+    }
+
+    langButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        setLanguage(button.dataset.lang);
+      });
+    });
+
+    const themeToggle = document.getElementById("themeToggle");
+
+    themeToggle.addEventListener("click", () => {
+      const currentTheme =
+        document.documentElement.getAttribute("data-theme");
+
+      const newTheme =
+        currentTheme === "dark" ? "light" : "dark";
+
+      document.documentElement.setAttribute(
+        "data-theme",
+        newTheme
+      );
+    });
+  </script>
+</body>
+</html>
