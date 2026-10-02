@@ -1,1229 +1,1232 @@
 <!DOCTYPE html>
 <html lang="es" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arturo Fuentes Coria | CV & Consultoría</title>
-  <meta
-    name="description"
-    content="CV profesional y servicios de consultoría de Arturo Fuentes Coria."
-  />
-
-  <style>
-    :root,
-    [data-theme="light"] {
-      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
-      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
-      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
-      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
-      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
-      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
-
-      --space-1: 0.25rem;
-      --space-2: 0.5rem;
-      --space-3: 0.75rem;
-      --space-4: 1rem;
-      --space-5: 1.25rem;
-      --space-6: 1.5rem;
-      --space-8: 2rem;
-      --space-10: 2.5rem;
-      --space-12: 3rem;
-
-      --color-bg: #f7f6f2;
-      --color-surface: #fbfbf9;
-      --color-surface-2: #f0ede8;
-      --color-border: #d8d3cb;
-
-      --color-text: #25211b;
-      --color-text-muted: #6f6b64;
-      --color-text-inverse: #f8f7f4;
-
-      --color-primary: #01696f;
-      --color-primary-hover: #0c4e54;
-      --color-primary-soft: #dfeceb;
-      --color-blue: #006494;
-
-      --radius-sm: 0.5rem;
-      --radius-md: 0.875rem;
-      --radius-lg: 1.25rem;
-      --radius-xl: 1.75rem;
-      --radius-full: 9999px;
-
-      --shadow-sm: 0 1px 2px rgba(28, 22, 16, 0.06);
-      --shadow-md: 0 10px 30px rgba(28, 22, 16, 0.09);
-
-      --font-body: Arial, Helvetica, sans-serif;
-      --font-display: Arial, Helvetica, sans-serif;
-
-      --content-wide: 1180px;
-      --transition: 180ms cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    [data-theme="dark"] {
-      --color-bg: #141311;
-      --color-surface: #1c1b19;
-      --color-surface-2: #23211f;
-      --color-border: #393632;
-
-      --color-text: #e4e0d9;
-      --color-text-muted: #b0aaa1;
-      --color-text-inverse: #171513;
-
-      --color-primary: #63a9b1;
-      --color-primary-hover: #88bdc3;
-      --color-primary-soft: #223132;
-      --color-blue: #75acd5;
-
-      --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
-      --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.28);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    body {
-      min-height: 100vh;
-      background:
-        radial-gradient(circle at top right, rgba(1, 105, 111, 0.08), transparent 30%),
-        radial-gradient(circle at left 20%, rgba(0, 100, 148, 0.06), transparent 25%),
-        var(--color-bg);
-      color: var(--color-text);
-      font-family: var(--font-body);
-      font-size: var(--text-base);
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    button {
-      font: inherit;
-      border: 0;
-      background: none;
-      color: inherit;
-      cursor: pointer;
-    }
-
-    .page {
-      max-width: var(--content-wide);
-      margin: 0 auto;
-      padding: var(--space-6);
-    }
-
-    .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: var(--space-4);
-      padding: var(--space-4) 0;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: var(--space-3);
-    }
-
-    .logo {
-      width: 44px;
-      height: 44px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, var(--color-primary), var(--color-blue));
-      display: grid;
-      place-items: center;
-      color: white;
-      box-shadow: var(--shadow-sm);
-      font-weight: 900;
-      font-size: 1.1rem;
-    }
-
-    .brand-text strong {
-      display: block;
-      font-size: var(--text-sm);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .brand-text span {
-      display: block;
-      color: var(--color-text-muted);
-      font-size: var(--text-xs);
-    }
-
-    .controls {
-      display: flex;
-      gap: var(--space-2);
-      flex-wrap: wrap;
-    }
-
-    .control-btn,
-    .lang-btn {
-      min-width: 44px;
-      min-height: 44px;
-      padding: 0 var(--space-4);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-full);
-      background: var(--color-surface);
-      transition: all var(--transition);
-    }
-
-    .control-btn:hover,
-    .lang-btn:hover,
-    .lang-btn.active {
-      background: var(--color-primary);
-      color: var(--color-text-inverse);
-      border-color: var(--color-primary);
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: var(--space-8);
-      align-items: stretch;
-      padding: var(--space-8) 0 var(--space-10);
-    }
-
-    .hero-copy,
-    .photo-card,
-    .contact-card,
-    .kpi-card,
-    .panel,
-    .consulting-wrapper {
-      background: var(--color-surface);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-xl);
-      box-shadow: var(--shadow-md);
-    }
-
-    .hero-copy {
-      padding: var(--space-8);
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: var(--space-2);
-      padding: var(--space-2) var(--space-4);
-      border-radius: var(--radius-full);
-      background: var(--color-primary-soft);
-      color: var(--color-primary);
-      font-size: var(--text-xs);
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      font-family: var(--font-display);
-      font-size: var(--text-2xl);
-      line-height: 1.05;
-      margin-top: var(--space-6);
-    }
-
-    .headline {
-      font-size: var(--text-lg);
-      color: var(--color-text-muted);
-      margin-top: var(--space-4);
-      text-align: justify;
-    }
-
-    .intro {
-      margin-top: var(--space-5);
-      text-align: justify;
-    }
-
-    .meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-3);
-      margin-top: var(--space-6);
-    }
-
-    .chip {
-      padding: var(--space-2) var(--space-4);
-      border-radius: var(--radius-full);
-      background: var(--color-surface-2);
-      border: 1px solid var(--color-border);
-      font-size: var(--text-sm);
-    }
-
-    .hero-side {
-      display: grid;
-      gap: var(--space-4);
-    }
-
-    .photo-card,
-    .contact-card,
-    .kpi-card {
-      padding: var(--space-5);
-    }
-
-    .photo-card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .photo-frame {
-      width: 200px;
-      height: 250px;
-      border-radius: var(--radius-xl);
-      overflow: hidden;
-      background: var(--color-surface-2);
-      border: 1px solid var(--color-border);
-      display: grid;
-      place-items: center;
-    }
-
-    .photo-frame img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .photo-placeholder {
-      font-size: 4rem;
-      color: var(--color-primary);
-      font-weight: 900;
-    }
-
-    .photo-note {
-      margin-top: var(--space-4);
-      color: var(--color-text-muted);
-      font-size: var(--text-sm);
-    }
-
-    .section-title {
-      font-size: var(--text-xs);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--color-primary);
-      font-weight: 800;
-      margin-bottom: var(--space-3);
-    }
-
-    .metric {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: var(--space-3);
-    }
-
-    .metric div {
-      padding: var(--space-4);
-      border-radius: var(--radius-lg);
-      background: var(--color-surface-2);
-      border: 1px solid var(--color-border);
-    }
-
-    .metric strong {
-      display: block;
-      font-size: var(--text-xl);
-    }
-
-    .metric span {
-      color: var(--color-text-muted);
-      font-size: var(--text-sm);
-    }
-
-    .section-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-6);
-      padding-bottom: var(--space-8);
-    }
-
-    .panel {
-      padding: var(--space-6);
-    }
-
-    .panel h2,
-    .consulting-wrapper h2 {
-      font-size: var(--text-xl);
-      margin-bottom: var(--space-4);
-    }
-
-    .timeline {
-      display: grid;
-      gap: var(--space-5);
-    }
-
-    .job {
-      padding-bottom: var(--space-5);
-      border-bottom: 1px solid var(--color-border);
-    }
-
-    .job:last-child {
-      border-bottom: 0;
-      padding-bottom: 0;
-    }
-
-    .job-top {
-      display: flex;
-      justify-content: space-between;
-      gap: var(--space-4);
-      flex-wrap: wrap;
-      margin-bottom: var(--space-2);
-    }
-
-    .job-role {
-      font-weight: 900;
-    }
-
-    .job-meta {
-      color: var(--color-text-muted);
-      font-size: var(--text-sm);
-    }
-
-    .job p {
-      text-align: justify;
-    }
-
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-2);
-    }
-
-    .skills span {
-      padding: var(--space-2) var(--space-3);
-      font-size: var(--text-sm);
-      border-radius: var(--radius-full);
-      background: var(--color-surface-2);
-      border: 1px solid var(--color-border);
-    }
-
-    .edu-list,
-    .cert-list,
-    .contact-list {
-      display: grid;
-      gap: var(--space-3);
-    }
-
-    .consulting-wrapper {
-      padding: var(--space-8);
-      margin-bottom: var(--space-8);
-      border: 2px solid color-mix(in srgb, var(--color-primary) 45%, var(--color-border));
-      background:
-        linear-gradient(
-          135deg,
-          color-mix(in srgb, var(--color-primary-soft) 42%, var(--color-surface)),
-          var(--color-surface)
-        );
-    }
-
-    .consulting-intro {
-      max-width: 850px;
-      color: var(--color-text-muted);
-      margin-bottom: var(--space-6);
-      text-align: justify;
-    }
-
-    .consulting-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: var(--space-5);
-    }
-
-    .consulting-card {
-      padding: var(--space-6);
-      background: var(--color-surface);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-lg);
-      transition: transform var(--transition), box-shadow var(--transition);
-    }
-
-    .consulting-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-md);
-    }
-
-    .consulting-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 14px;
-      display: grid;
-      place-items: center;
-      background: var(--color-primary-soft);
-      color: var(--color-primary);
-      font-weight: 900;
-      margin-bottom: var(--space-4);
-    }
-
-    .consulting-card h3 {
-      font-size: var(--text-lg);
-      margin-bottom: var(--space-3);
-    }
-
-    .consulting-card p {
-      color: var(--color-text-muted);
-      text-align: justify;
-    }
-
-    .consulting-card ul {
-      margin-top: var(--space-4);
-      padding-left: 1.2rem;
-    }
-
-    .consulting-card li {
-      margin-bottom: var(--space-2);
-    }
-
-    .cta-box {
-      margin-top: var(--space-6);
-      padding: var(--space-5);
-      border-radius: var(--radius-lg);
-      background: var(--color-primary);
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      gap: var(--space-4);
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .cta-button {
-      padding: var(--space-3) var(--space-5);
-      background: white;
-      color: var(--color-primary);
-      border-radius: var(--radius-full);
-      font-weight: 800;
-    }
-
-    .whatsapp-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: var(--space-2);
-      padding: var(--space-2) var(--space-4);
-      background-color: #25d366;
-      color: #ffffff !important;
-      border-radius: var(--radius-full);
-      font-size: var(--text-sm);
-      font-weight: 700;
-      width: fit-content;
-    }
-
-    .footer {
-      padding: var(--space-8) 0 var(--space-4);
-      color: var(--color-text-muted);
-      font-size: var(--text-sm);
-      text-align: center;
-    }
-
-    @media (max-width: 980px) {
-      .hero,
-      .section-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .consulting-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .metric {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .page {
-        padding: var(--space-4);
-      }
-
-      .topbar {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .controls {
-        width: 100%;
-      }
-
-      .control-btn,
-      .lang-btn {
-        flex: 1;
-      }
-
-      .hero-copy,
-      .panel,
-      .photo-card,
-      .contact-card,
-      .kpi-card,
-      .consulting-wrapper {
-        padding: var(--space-5);
-      }
-    }
-  </style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arturo Fuentes Coria | CV & Consultoría</title>
+<meta name="description" content="CV profesional y servicios de consultoría de Arturo Fuentes Coria.">
+<style>
+:root{--bg:#f7f6f2;--card:#fff;--soft:#f0ede8;--border:#d8d3cb;--text:#25211b;--muted:#6f6b64;--pri:#01696f;--pri2:#006494;--radius:22px;--shadow:0 10px 30px #1c161610}
+[data-theme=dark]{--bg:#141311;--card:#1c1b19;--soft:#23211f;--border:#393632;--text:#e4e0d9;--muted:#b0aaa1;--pri:#63a9b1;--pri2:#75acd5;--shadow:0 10px 30px #0005}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at top right,#01696f14,transparent 30%),var(--bg);color:var(--text);font:16px/1.6 Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;cursor:pointer}
+.page{max-width:1180px;margin:auto;padding:24px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 0}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,var(--pri),var(--pri2));color:#fff;display:grid;place-items:center;font-weight:900}
+.brand small{display:block;color:var(--muted)}
+.controls{display:flex;gap:8px;flex-wrap:wrap}
+.controls button{border:1px solid var(--border);background:var(--card);border-radius:999px;min-height:42px;padding:0 14px}
+.controls button.active,.controls button:hover{background:var(--pri);color:#fff;border-color:var(--pri)}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;padding:28px 0 36px}
+.card,.panel,.consult{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}
+.hero-copy{padding:30px}
+.eyebrow,.label{color:var(--pri);font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+h1{font-size:clamp(2rem,5vw,3.3rem);line-height:1.05;text-align:center;margin:24px 0 12px}
+h2{font-size:clamp(1.4rem,3vw,2rem);margin:4px 0 16px}
+h3{margin:0 0 10px}
+.headline{font-size:1.2rem;color:var(--muted);text-align:justify}
+.summary,.job p,.consult p,.availability{text-align:justify}
+.chips,.skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.chip,.skills span{background:var(--soft);border:1px solid var(--border);border-radius:999px;padding:7px 11px;font-size:14px}
+.side{display:grid;gap:16px}
+.side .card{padding:20px}
+.photo{width:200px;height:250px;margin:auto;border-radius:18px;overflow:hidden;border:1px solid var(--border)}
+.photo img{width:100%;height:100%;object-fit:cover}
+.contact{display:grid;gap:10px}
+.wa{background:#25D366;color:white!important;border-radius:999px;padding:7px 12px;width:max-content}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.metrics div{background:var(--soft);border:1px solid var(--border);border-radius:16px;padding:12px}
+.metrics b{display:block;font-size:1.35rem}
+.metrics span{font-size:13px;color:var(--muted)}
+.consult{padding:28px;margin-bottom:24px;border:2px solid color-mix(in srgb,var(--pri) 45%,var(--border))}
+.consult-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.service{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px}
+.num{width:44px;height:44px;border-radius:13px;background:var(--soft);color:var(--pri);display:grid;place-items:center;font-weight:900;margin-bottom:12px}
+.service ul{padding-left:18px;margin-bottom:0}
+.cta{margin-top:18px;background:var(--pri);color:#fff;border-radius:16px;padding:18px;display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}
+.cta a{background:#fff;color:var(--pri);padding:9px 14px;border-radius:999px;font-weight:800}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.panel{padding:24px}
+.job{padding:0 0 18px;margin-bottom:18px;border-bottom:1px solid var(--border)}
+.job:last-child{border:0;margin:0;padding:0}
+.jobtop{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.meta{color:var(--muted);font-size:14px}
+.list{display:grid;gap:10px}
+footer{padding:28px 0 12px;color:var(--muted);text-align:center;font-size:14px}
+
+@media(max-width:900px){
+.hero,.grid,.consult-grid{grid-template-columns:1fr}
+.metrics{grid-template-columns:1fr}
+}
+
+@media(max-width:600px){
+.page{padding:16px}
+.top{align-items:flex-start;flex-direction:column}
+.controls{width:100%}
+.controls button{flex:1}
+.hero-copy,.panel,.consult{padding:20px}
+}
+</style>
 </head>
 
 <body>
-  <div class="page">
-
-    <header class="topbar">
-      <div class="brand">
-        <div class="logo">AF</div>
-
-        <div class="brand-text">
-          <strong>Arturo Fuentes Coria</strong>
-          <span data-i18n="brandRole">© 2026 | Estrategia, ejecución y resultados.</span>
-        </div>
-      </div>
-
-      <div class="controls">
-        <button class="lang-btn active" data-lang="es">ES</button>
-        <button class="lang-btn" data-lang="en">EN</button>
-        <button class="lang-btn" data-lang="zh">中文</button>
-        <button class="control-btn" id="themeToggle">◐</button>
-      </div>
-    </header>
-
-    <main>
-
-      <!-- HERO -->
-      <section class="hero">
-
-        <article class="hero-copy">
-          <div class="eyebrow" data-i18n="eyebrow">
-            Operaciones Comerciales · Retail · Business Development · Data Analytics & BI
-          </div>
-
-          <h1>Arturo Fuentes Coria</h1>
-
-          <p class="headline" data-i18n="headline">
-            Profesional con más de 10 años de experiencia en retail,
-            telecomunicaciones, operaciones comerciales, desarrollo de mercado,
-            gestión territorial y liderazgo de equipos.
-          </p>
-
-          <p class="intro" data-i18n="summary">
-            Experiencia en Sell In, Sell Out, Trade Marketing, ejecución en punto
-            de venta, gestión de distribuidores, cuentas clave, KPIs, forecast,
-            inventarios, dashboards y Business Intelligence. Perfil híbrido que
-            integra experiencia operativa y comercial en campo con formación en
-            Data Analytics, Inteligencia Artificial, Prompt Engineering, Machine
-            Learning y Ciberseguridad. Orientado al crecimiento de ingresos,
-            expansión territorial, optimización de procesos y toma de decisiones
-            basada en datos.
-          </p>
-
-          <div class="meta">
-            <span class="chip">Xalapa, Veracruz, México</span>
-            <span class="chip">Español Nativo · Inglés B1–B2</span>
-            <span class="chip">Presencial · Híbrido · Remoto</span>
-          </div>
-        </article>
-
-        <aside class="hero-side">
-
-          <section class="photo-card">
-            <div class="section-title">Perfil profesional</div>
-
-            <div class="photo-frame">
-              <!--
-              Si ya tienes tu foto en GitHub cambia lo siguiente por:
-              <img src="foto.jpg" alt="Arturo Fuentes Coria">
-              -->
-              <div class="photo-placeholder">AF</div>
-            </div>
-
-            <div class="photo-note">Arturo Fuentes Coria</div>
-          </section>
-
-          <section class="kpi-card">
-            <div class="section-title">Impacto profesional</div>
-
-            <div class="metric">
-              <div>
-                <strong>+10</strong>
-                <span>Años de experiencia</span>
-              </div>
-
-              <div>
-                <strong>5</strong>
-                <span>Estados gestionados</span>
-              </div>
-
-              <div>
-                <strong>780+</strong>
-                <span>Puntos de venta</span>
-              </div>
-            </div>
-          </section>
-
-          <section class="contact-card">
-            <div class="section-title">Contacto</div>
-
-            <div class="contact-list">
-              <a href="mailto:arturofc@icloud.com">arturofc@icloud.com</a>
-
-              <a href="tel:+525586399463">
-                +52 55 86 399 463
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/arturofuentees"
-                target="_blank"
-                rel="noopener"
-              >
-                LinkedIn
-              </a>
-
-              <a
-                class="whatsapp-btn"
-                href="https://wa.me/525586399463"
-                target="_blank"
-                rel="noopener"
-              >
-                WhatsApp
-              </a>
-            </div>
-          </section>
-
-        </aside>
-      </section>
-
-      <!-- CONSULTORÍA -->
-      <section class="consulting-wrapper">
-
-        <div class="section-title" data-i18n="consultingLabel">
-          Servicios profesionales
-        </div>
-
-        <h2 data-i18n="consultingTitle">
-          Consultoría
-        </h2>
-
-        <p class="consulting-intro" data-i18n="consultingIntro">
-          Servicios de consultoría dirigidos a empresas, emprendimientos,
-          organizaciones y proyectos que requieren fortalecer su estrategia
-          comercial, optimizar operaciones o estructurar iniciativas sociales
-          mediante análisis, planeación, indicadores y toma de decisiones basada
-          en información.
-        </p>
-
-        <div class="consulting-grid">
-
-          <!-- CONSULTORÍA COMERCIAL -->
-          <article class="consulting-card">
-            <div class="consulting-icon">01</div>
-
-            <h3 data-i18n="commercialTitle">
-              Consultoría Comercial
-            </h3>
-
-            <p data-i18n="commercialText">
-              Diagnóstico y diseño de estrategias orientadas al crecimiento de
-              ventas, desarrollo de mercado, expansión territorial y mejora de la
-              ejecución comercial.
-            </p>
-
-            <ul>
-              <li>Sell In y Sell Out</li>
-              <li>Business Development</li>
-              <li>Trade Marketing</li>
-              <li>Gestión de distribuidores</li>
-              <li>Key Account Management</li>
-              <li>Expansión territorial</li>
-              <li>KPIs comerciales</li>
-              <li>Forecast e inventarios</li>
-              <li>Revenue Growth</li>
-              <li>Dashboards comerciales</li>
-            </ul>
-          </article>
-
-          <!-- CONSULTORÍA OPERATIVA -->
-          <article class="consulting-card">
-            <div class="consulting-icon">02</div>
-
-            <h3 data-i18n="operationsTitle">
-              Consultoría de Operaciones
-            </h3>
-
-            <p data-i18n="operationsText">
-              Evaluación y optimización de procesos comerciales y operativos,
-              productividad de equipos, cobertura territorial y seguimiento de
-              indicadores para mejorar eficiencia y resultados.
-            </p>
-
-            <ul>
-              <li>Diagnóstico operativo</li>
-              <li>Diseño de procesos</li>
-              <li>Retail Operations</li>
-              <li>Field Operations</li>
-              <li>Sales Operations</li>
-              <li>Productividad de equipos</li>
-              <li>Control de ejecución</li>
-              <li>Análisis de KPIs</li>
-              <li>Business Intelligence</li>
-              <li>Mejora continua</li>
-            </ul>
-          </article>
-
-          <!-- CONSULTORÍA POLÍTICAS Y PROYECTOS -->
-          <article class="consulting-card">
-            <div class="consulting-icon">03</div>
-
-            <h3 data-i18n="projectsTitle">
-              Consultoría en Políticas y Proyectos
-            </h3>
-
-            <p data-i18n="projectsText">
-              Apoyo en diagnóstico, diseño, estructuración, seguimiento y
-              evaluación de programas, proyectos sociales e iniciativas con
-              enfoque territorial y orientación a resultados.
-            </p>
-
-            <ul>
-              <li>Diagnóstico social</li>
-              <li>Diseño de proyectos</li>
-              <li>Planeación estratégica</li>
-              <li>Árbol de problemas y objetivos</li>
-              <li>Marco lógico</li>
-              <li>Indicadores</li>
-              <li>Evaluación de proyectos</li>
-              <li>Seguimiento de resultados</li>
-              <li>Análisis territorial</li>
-              <li>Investigación documental</li>
-            </ul>
-          </article>
-
-        </div>
-
-        <div class="cta-box">
-          <div>
-            <strong data-i18n="ctaTitle">
-              ¿Tu empresa u organización requiere apoyo especializado?
-            </strong>
-
-            <div data-i18n="ctaText">
-              Podemos revisar tu situación actual y definir una propuesta de trabajo.
-            </div>
-          </div>
-
-          <a
-            class="cta-button"
-            href="https://wa.me/525586399463"
-            target="_blank"
-            rel="noopener"
-            data-i18n="ctaButton"
-          >
-            Solicitar consulta
-          </a>
-        </div>
-
-      </section>
-
-      <!-- EXPERIENCIA -->
-      <section class="section-grid">
-
-        <article class="panel">
-
-          <div class="section-title" data-i18n="expLabel">
-            Experiencia
-          </div>
-
-          <h2 data-i18n="expTitle">
-            Experiencia profesional
-          </h2>
-
-          <div class="timeline">
-
-            <!-- REALME -->
-            <div class="job">
-              <div class="job-top">
-                <div>
-                  <div class="job-role">
-                    Key Account Manager R7 · Realme
-                  </div>
-
-                  <div class="job-meta">
-                    Ene 2026 – Presente
-                  </div>
-                </div>
-
-                <div class="job-meta">
-                  México
-                </div>
-              </div>
-
-              <p>
-                Lidero la operación comercial regional en cinco estados,
-                gestionando distribuidores, retail partners y equipos de campo
-                para fortalecer cobertura, ejecución y cumplimiento de objetivos.
-                Desarrollo estrategias de Sell In, Sell Out, expansión territorial
-                y gestión de cuentas clave, identificando oportunidades de
-                crecimiento por cliente y mercado. Analizo KPIs, forecast,
-                inventarios, rotación y desempeño comercial para optimizar
-                decisiones, recursos y resultados regionales.
-              </p>
-            </div>
-
-            <!-- TECNO -->
-            <div class="job">
-              <div class="job-top">
-                <div>
-                  <div class="job-role">
-                    Regional Manager R7 · TECNO Mobile
-                  </div>
-
-                  <div class="job-meta">
-                    Ago 2023 – Dic 2025
-                  </div>
-                </div>
-
-                <div class="job-meta">
-                  Veracruz · Puebla · Tlaxcala · Guerrero · Oaxaca
-                </div>
-              </div>
-
-              <p>
-                Lideré la operación regional en cinco estados, coordinando
-                10 City Managers, más de 200 promotores y más de 780 puntos de
-                venta. Gestioné más de 100 distribuidores y 6 mayoristas,
-                impulsando estrategias de Sell In, Sell Out, expansión territorial
-                y desarrollo de mercado. Alcancé mejoras de +14% en Sell Out,
-                +17% en cobertura y 93% de precisión en forecast mediante
-                seguimiento de KPIs y ejecución comercial.
-              </p>
-            </div>
-
-            <!-- OPPO -->
-            <div class="job">
-              <div class="job-top">
-                <div>
-                  <div class="job-role">
-                    Retail Manager R7E · OPPO Mobile
-                  </div>
-
-                  <div class="job-meta">
-                    Sep 2020 – Ago 2023
-                  </div>
-                </div>
-
-                <div class="job-meta">
-                  México
-                </div>
-              </div>
-
-              <p>
-                Dirigí operaciones de retail, ejecución comercial y equipos de
-                campo, asegurando productividad, cobertura y desempeño en punto
-                de venta. Diseñé estrategias de Trade Marketing, desarrollo de
-                mercado y mejora de procesos, apoyadas en KPIs, ventas,
-                inventarios y análisis comercial. Implementé dashboards y
-                Business Intelligence para identificar tendencias, oportunidades
-                de crecimiento y fortalecer la toma de decisiones basada en datos.
-              </p>
-            </div>
-
-          </div>
-        </article>
-
-        <!-- HABILIDADES -->
-        <article class="panel">
-          <div class="section-title">
-            Competencias
-          </div>
-
-          <h2>
-            Habilidades clave
-          </h2>
-
-          <div class="skills">
-            <span>Operaciones Comerciales</span>
-            <span>Retail</span>
-            <span>Business Development</span>
-            <span>Trade Marketing</span>
-            <span>Key Account Management</span>
-            <span>Sell In</span>
-            <span>Sell Out</span>
-            <span>Forecast</span>
-            <span>KPIs</span>
-            <span>Gestión de Distribuidores</span>
-            <span>Expansión Territorial</span>
-            <span>Data Analytics</span>
-            <span>Business Intelligence</span>
-            <span>Power BI</span>
-            <span>Excel Avanzado</span>
-            <span>IA Aplicada</span>
-            <span>Liderazgo</span>
-            <span>Negociación</span>
-          </div>
-        </article>
-
-        <!-- FORMACIÓN -->
-        <article class="panel">
-          <div class="section-title">
-            Formación
-          </div>
-
-          <h2>
-            Formación académica
-          </h2>
-
-          <div class="edu-list">
-            <div>
-              <strong>Licenciatura en Políticas y Proyectos Sociales</strong>
-              <br />
-              Universidad Abierta y a Distancia de México · En curso
-            </div>
-
-            <div>
-              <strong>Ingeniería Industrial</strong>
-              <br />
-              Universidad Popular Autónoma de Veracruz
-            </div>
-
-            <div>
-              <strong>Contaduría Pública</strong>
-              <br />
-              Universidad del Golfo de México Norte
-            </div>
-          </div>
-        </article>
-
-        <!-- CERTIFICACIONES -->
-        <article class="panel">
-          <div class="section-title">
-            Credenciales
-          </div>
-
-          <h2>
-            Certificaciones y formación
-          </h2>
-
-          <div class="cert-list">
-            <div>Google Project Management</div>
-            <div>AWS Cloud Operations</div>
-            <div>Data Analytics & Business Intelligence</div>
-            <div>Inteligencia Artificial</div>
-            <div>Prompt Engineering</div>
-            <div>Machine Learning</div>
-            <div>Ciberseguridad Cisco</div>
-            <div>Six Sigma</div>
-          </div>
-        </article>
-
-        <!-- DISPONIBILIDAD -->
-        <article class="panel">
-          <div class="section-title">
-            Disponibilidad
-          </div>
-
-          <h2>
-            Modalidad e interés
-          </h2>
-
-          <p style="text-align: justify;">
-            Disponible para posiciones presenciales, híbridas o remotas, con
-            apertura a cambio de residencia. Interés en posiciones relacionadas
-            con operaciones comerciales, retail, business development, key
-            account management, data analytics, Business Intelligence y
-            transformación digital.
-          </p>
-        </article>
-
-      </section>
-
-    </main>
-
-    <footer class="footer">
-      © 2026 Arturo Fuentes Coria | Estrategia, ejecución y resultados.
-    </footer>
-
-  </div>
-
-  <script>
-    const copy = {
-      es: {
-        brandRole: "© 2026 | Estrategia, ejecución y resultados.",
-        eyebrow:
-          "Operaciones Comerciales · Retail · Business Development · Data Analytics & BI",
-
-        headline:
-          "Profesional con más de 10 años de experiencia en retail, telecomunicaciones, operaciones comerciales, desarrollo de mercado, gestión territorial y liderazgo de equipos.",
-
-        summary:
-          "Experiencia en Sell In, Sell Out, Trade Marketing, ejecución en punto de venta, gestión de distribuidores, cuentas clave, KPIs, forecast, inventarios, dashboards y Business Intelligence. Perfil híbrido que integra experiencia operativa y comercial en campo con formación en Data Analytics, Inteligencia Artificial, Prompt Engineering, Machine Learning y Ciberseguridad. Orientado al crecimiento de ingresos, expansión territorial, optimización de procesos y toma de decisiones basada en datos.",
-
-        consultingLabel: "Servicios profesionales",
-        consultingTitle: "Consultoría",
-
-        consultingIntro:
-          "Servicios de consultoría dirigidos a empresas, emprendimientos, organizaciones y proyectos que requieren fortalecer su estrategia comercial, optimizar operaciones o estructurar iniciativas sociales mediante análisis, planeación, indicadores y toma de decisiones basada en información.",
-
-        commercialTitle: "Consultoría Comercial",
-
-        commercialText:
-          "Diagnóstico y diseño de estrategias orientadas al crecimiento de ventas, desarrollo de mercado, expansión territorial y mejora de la ejecución comercial.",
-
-        operationsTitle: "Consultoría de Operaciones",
-
-        operationsText:
-          "Evaluación y optimización de procesos comerciales y operativos, productividad de equipos, cobertura territorial y seguimiento de indicadores para mejorar eficiencia y resultados.",
-
-        projectsTitle: "Consultoría en Políticas y Proyectos",
-
-        projectsText:
-          "Apoyo en diagnóstico, diseño, estructuración, seguimiento y evaluación de programas, proyectos sociales e iniciativas con enfoque territorial y orientación a resultados.",
-
-        ctaTitle:
-          "¿Tu empresa u organización requiere apoyo especializado?",
-
-        ctaText:
-          "Podemos revisar tu situación actual y definir una propuesta de trabajo.",
-
-        ctaButton:
-          "Solicitar consulta",
-
-        expLabel: "Experiencia",
-        expTitle: "Experiencia profesional"
-      },
-
-      en: {
-        brandRole: "© 2026 | Strategy, execution and results.",
-
-        eyebrow:
-          "Commercial Operations · Retail · Business Development · Data Analytics & BI",
-
-        headline:
-          "Professional with more than 10 years of experience in retail, telecommunications, commercial operations, market development, territory management and team leadership.",
-
-        summary:
-          "Experience in Sell In, Sell Out, Trade Marketing, point-of-sale execution, distributor management, key accounts, KPIs, forecasting, inventory, dashboards and Business Intelligence. Hybrid profile combining field commercial and operational experience with training in Data Analytics, Artificial Intelligence, Prompt Engineering, Machine Learning and Cybersecurity. Focused on revenue growth, territorial expansion, process optimization and data-driven decision-making.",
-
-        consultingLabel: "Professional services",
-        consultingTitle: "Consulting",
-
-        consultingIntro:
-          "Consulting services for companies, entrepreneurs, organizations and projects seeking to strengthen commercial strategy, optimize operations or structure social initiatives through analysis, planning, indicators and data-driven decision-making.",
-
-        commercialTitle: "Commercial Consulting",
-
-        commercialText:
-          "Diagnosis and design of strategies focused on sales growth, market development, territorial expansion and commercial execution improvement.",
-
-        operationsTitle: "Operations Consulting",
-
-        operationsText:
-          "Evaluation and optimization of commercial and operational processes, team productivity, territorial coverage and performance indicators.",
-
-        projectsTitle: "Policies & Projects Consulting",
-
-        projectsText:
-          "Support in diagnosis, design, structuring, monitoring and evaluation of programs, social projects and initiatives focused on measurable results.",
-
-        ctaTitle:
-          "Does your company or organization need specialized support?",
-
-        ctaText:
-          "We can review your current situation and define a tailored work proposal.",
-
-        ctaButton:
-          "Request consultation",
-
-        expLabel: "Experience",
-        expTitle: "Professional experience"
-      },
-
-      zh: {
-        brandRole: "© 2026 | 战略、执行与成果",
-
-        eyebrow:
-          "商业运营 · 零售管理 · 商务拓展 · 数据分析与商业智能",
-
-        headline:
-          "拥有十年以上零售、电信、商业运营、市场开发、区域管理及团队领导经验。",
-
-        summary:
-          "具备 Sell In、Sell Out、Trade Marketing、零售终端执行、经销商管理、重点客户管理、KPI、销售预测、库存管理、数据仪表板和商业智能经验。兼具一线商业运营经验与数据分析、人工智能、提示工程、机器学习及网络安全相关培训，专注于收入增长、区域扩张、流程优化及数据驱动决策。",
-
-        consultingLabel: "专业服务",
-        consultingTitle: "咨询服务",
-
-        consultingIntro:
-          "面向企业、创业者、机构及项目提供商业战略、运营优化及政策和项目规划咨询服务，通过分析、规划、指标管理及数据驱动决策提升执行效果。",
-
-        commercialTitle: "商业咨询",
-
-        commercialText:
-          "针对销售增长、市场开发、区域扩张、渠道管理及商业执行提供诊断与战略设计。",
-
-        operationsTitle: "运营咨询",
-
-        operationsText:
-          "评估并优化商业及运营流程、团队效率、区域覆盖及关键绩效指标。",
-
-        projectsTitle: "政策与项目咨询",
-
-        projectsText:
-          "支持社会项目、公共政策及相关计划的诊断、设计、规划、监测和评估。",
-
-        ctaTitle:
-          "您的企业或机构需要专业支持吗？",
-
-        ctaText:
-          "我们可以分析当前情况，并制定适合的合作方案。",
-
-        ctaButton:
-          "联系咨询",
-
-        expLabel: "工作经历",
-        expTitle: "专业经历"
-      }
-    };
-
-    const langButtons = document.querySelectorAll(".lang-btn");
-    const translatableElements = document.querySelectorAll("[data-i18n]");
-
-    function setLanguage(lang) {
-      translatableElements.forEach((element) => {
-        const key = element.dataset.i18n;
-
-        if (copy[lang] && copy[lang][key]) {
-          element.textContent = copy[lang][key];
-        }
-      });
-
-      langButtons.forEach((button) => {
-        button.classList.toggle(
-          "active",
-          button.dataset.lang === lang
-        );
-      });
-
-      document.documentElement.lang = lang;
-    }
-
-    langButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        setLanguage(button.dataset.lang);
-      });
-    });
-
-    const themeToggle = document.getElementById("themeToggle");
-
-    themeToggle.addEventListener("click", () => {
-      const currentTheme =
-        document.documentElement.getAttribute("data-theme");
-
-      const newTheme =
-        currentTheme === "dark" ? "light" : "dark";
-
-      document.documentElement.setAttribute(
-        "data-theme",
-        newTheme
-      );
-    });
-  </script>
+<div class="page">
+
+<header class="top">
+
+<div class="brand">
+<div class="logo">AF</div>
+<div>
+<strong>Arturo Fuentes Coria</strong>
+<small data-k="brand">© 2026 | Estrategia, ejecución y resultados.</small>
+</div>
+</div>
+
+<div class="controls">
+<button class="lang active" data-lang="es">ES</button>
+<button class="lang" data-lang="en">EN</button>
+<button class="lang" data-lang="zh">中文</button>
+<button id="theme">◐</button>
+</div>
+
+</header>
+
+<main>
+
+<section class="hero">
+
+<article class="card hero-copy">
+
+<div class="eyebrow" data-k="eyebrow">
+Operaciones Comerciales · Retail · Business Development · Data Analytics & BI
+</div>
+
+<h1>Arturo Fuentes Coria</h1>
+
+<p class="headline" data-k="headline">
+Profesional con más de 10 años de experiencia en retail, telecomunicaciones, operaciones comerciales, desarrollo de mercado, gestión territorial y liderazgo de equipos.
+</p>
+
+<p class="summary" data-k="summary">
+Experiencia en Sell In, Sell Out, Trade Marketing, ejecución en punto de venta, gestión de distribuidores, cuentas clave, KPIs, forecast, inventarios, dashboards y Business Intelligence. Perfil híbrido que integra experiencia operativa y comercial con formación en Data Analytics, Inteligencia Artificial, Prompt Engineering, Machine Learning y Ciberseguridad.
+</p>
+
+<div class="chips">
+<span class="chip" data-k="location">Xalapa, Veracruz, México</span>
+<span class="chip" data-k="languages">Español Nativo · Inglés B1–B2</span>
+<span class="chip" data-k="mode">Presencial · Híbrido · Remoto · Cambio de residencia</span>
+</div>
+
+</article>
+
+<aside class="side">
+
+<section class="card">
+
+<div class="label" data-k="profile">
+Perfil profesional
+</div>
+
+<div class="photo">
+<img
+id="photo"
+src="data:image/jpeg;base64,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"
+alt="Fotografía profesional de Arturo Fuentes Coria">
+</div>
+
+<p class="meta" style="text-align:center">
+Arturo Fuentes Coria
+</p>
+
+</section>
+
+<section class="card">
+
+<div class="label" data-k="contact">
+Contacto
+</div>
+
+<div class="contact">
+
+<a href="tel:+525586399463" data-k="phone">
+📞 Teléfono
+</a>
+
+<a
+class="wa"
+id="wa"
+target="_blank"
+rel="noopener"
+data-k="whatsapp">
+💬 WhatsApp
+</a>
+
+<a
+href="mailto:arturofc@icloud.com"
+data-k="email">
+📧 Correo electrónico
+</a>
+
+<a
+href="https://linkedin.com/in/arturofuentees"
+target="_blank">
+💼 LinkedIn
+</a>
+
+<a
+href="https://www.credly.com/users/arturofuentes"
+target="_blank">
+🏅 Credly
+</a>
+
+</div>
+</section>
+
+<section class="card">
+
+<div class="label" data-k="impact">
+Impacto profesional
+</div>
+
+<div class="metrics">
+
+<div>
+<b data-k="m1a">+10 Años</b>
+<span data-k="m1b">Retail, operaciones y ventas</span>
+</div>
+
+<div>
+<b>780+</b>
+<span data-k="m2b">Puntos de venta gestionados</span>
+</div>
+
+<div>
+<b data-k="m3a">5 Estados</b>
+<span data-k="m3b">Cobertura regional liderada</span>
+</div>
+
+</div>
+
+</section>
+
+</aside>
+</section>
+
+
+<section class="consult">
+
+<div class="label" data-k="services">
+Servicios profesionales
+</div>
+
+<h2 data-k="consult">
+Consultoría
+</h2>
+
+<p data-k="consultIntro">
+Servicios para empresas, organizaciones y proyectos que requieren fortalecer su estrategia comercial, optimizar operaciones o estructurar iniciativas de política y proyectos sociales con análisis, planeación, indicadores y orientación a resultados.
+</p>
+
+<div class="consult-grid">
+
+
+<article class="service">
+
+<div class="num">01</div>
+
+<h3 data-k="s1t">
+Consultoría Comercial
+</h3>
+
+<p data-k="s1p">
+Diagnóstico y diseño de estrategias orientadas al crecimiento de ventas, desarrollo de mercado, expansión territorial y mejora de la ejecución comercial.
+</p>
+
+<ul>
+<li data-k="s1a">Estrategia comercial y desarrollo de mercado</li>
+<li data-k="s1b">Sell In, Sell Out y Trade Marketing</li>
+<li data-k="s1c">Gestión de distribuidores y cuentas clave</li>
+<li data-k="s1d">Expansión territorial, KPIs y forecast</li>
+</ul>
+
+</article>
+
+
+<article class="service">
+
+<div class="num">02</div>
+
+<h3 data-k="s2t">
+Consultoría de Operaciones
+</h3>
+
+<p data-k="s2p">
+Evaluación y optimización de procesos comerciales y operativos, productividad de equipos, cobertura territorial y seguimiento de indicadores.
+</p>
+
+<ul>
+<li data-k="s2a">Diagnóstico y mejora de procesos</li>
+<li data-k="s2b">Retail, Field y Sales Operations</li>
+<li data-k="s2c">Productividad y gestión de equipos</li>
+<li data-k="s2d">Indicadores, control y mejora continua</li>
+</ul>
+
+</article>
+
+
+<article class="service">
+
+<div class="num">03</div>
+
+<h3 data-k="s3t">
+Consultoría Política y Proyectos Sociales
+</h3>
+
+<p data-k="s3p">
+Apoyo en análisis de políticas públicas, diagnóstico social, diseño, seguimiento y evaluación de proyectos sociales con enfoque territorial y orientación a resultados.
+</p>
+
+<ul>
+<li data-k="s3a">Análisis de políticas públicas</li>
+<li data-k="s3b">Diagnóstico social y territorial</li>
+<li data-k="s3c">Diseño de proyectos sociales y marco lógico</li>
+<li data-k="s3d">Indicadores, seguimiento y evaluación</li>
+</ul>
+
+</article>
+
+</div>
+
+
+<div class="cta">
+
+<div>
+
+<b data-k="ctat">
+¿Tu empresa u organización requiere apoyo especializado?
+</b>
+
+<div data-k="ctap">
+Podemos revisar tu situación actual y definir una propuesta de trabajo.
+</div>
+
+</div>
+
+<a
+id="cwa"
+target="_blank"
+rel="noopener"
+data-k="ctab">
+Solicitar consulta
+</a>
+
+</div>
+
+</section>
+
+
+<section class="grid">
+
+
+<article class="panel">
+
+<div class="label" data-k="experience">
+Experiencia
+</div>
+
+<h2 data-k="expTitle">
+Experiencia profesional
+</h2>
+
+
+<div class="job">
+
+<div class="jobtop">
+
+<div>
+<b data-k="j0r">
+Key Account Manager R7 · Realme
+</b>
+
+<div class="meta" data-k="j0d">
+Ene 2026 – Presente
+</div>
+</div>
+
+<div class="meta" data-k="mexico">
+México
+</div>
+
+</div>
+
+<p data-k="j0p">
+Lidero la operación comercial regional en cinco estados, gestionando distribuidores, retail partners y equipos de campo. Desarrollo estrategias de Sell In, Sell Out, expansión territorial y cuentas clave, y analizo KPIs, forecast, inventarios y desempeño para optimizar resultados.
+</p>
+
+</div>
+
+
+<div class="job">
+
+<div class="jobtop">
+
+<div>
+
+<b data-k="j1r">
+Regional Manager R7 · TECNO Mobile
+</b>
+
+<div class="meta" data-k="j1d">
+Ago 2023 – Dic 2025
+</div>
+
+</div>
+
+<div class="meta" data-k="region">
+Veracruz · Puebla · Tlaxcala · Guerrero · Oaxaca
+</div>
+
+</div>
+
+<p data-k="j1p">
+Lideré la operación regional en cinco estados, coordinando 10 City Managers, más de 200 promotores y más de 780 puntos de venta. Gestioné más de 100 distribuidores y 6 mayoristas. Alcancé +14% en Sell Out, +17% en cobertura y 93% de precisión en forecast.
+</p>
+
+</div>
+
+
+<div class="job">
+
+<div class="jobtop">
+
+<div>
+
+<b data-k="j2r">
+Retail Manager R7E · OPPO Mobile
+</b>
+
+<div class="meta" data-k="j2d">
+Sep 2020 – Ago 2023
+</div>
+
+</div>
+
+<div class="meta" data-k="mexico">
+México
+</div>
+
+</div>
+
+<p data-k="j2p">
+Dirigí operaciones de retail, ejecución comercial y equipos de campo. Diseñé estrategias de Trade Marketing, desarrollo de mercado y mejora de procesos, e implementé dashboards y Business Intelligence para fortalecer la toma de decisiones.
+</p>
+
+</div>
+
+</article>
+
+
+<article class="panel">
+
+<div class="label" data-k="skillsLabel">
+Competencias
+</div>
+
+<h2 data-k="skillsTitle">
+Habilidades clave
+</h2>
+
+<div class="skills">
+
+<span data-k="k1">Operaciones comerciales</span>
+<span data-k="k2">Retail</span>
+<span data-k="k3">Desarrollo de negocio</span>
+<span>Trade Marketing</span>
+<span data-k="k4">Gestión de cuentas clave</span>
+<span>Sell In</span>
+<span>Sell Out</span>
+<span data-k="k5">Forecast</span>
+<span>KPIs</span>
+<span data-k="k6">Gestión de distribuidores</span>
+<span data-k="k7">Expansión territorial</span>
+<span>Data Analytics</span>
+<span>Business Intelligence</span>
+<span>Power BI</span>
+<span data-k="k8">Excel avanzado</span>
+<span data-k="k9">IA aplicada</span>
+<span data-k="k10">Liderazgo</span>
+<span data-k="k11">Negociación</span>
+
+</div>
+
+</article>
+
+
+<article class="panel">
+
+<div class="label" data-k="education">
+Formación
+</div>
+
+<h2 data-k="educationTitle">
+Formación académica
+</h2>
+
+<div class="list">
+
+<div>
+<b data-k="e1">
+Licenciatura en Políticas y Proyectos Sociales
+</b>
+<br>
+<span class="meta" data-k="e1m">
+Universidad Abierta y a Distancia de México · En curso
+</span>
+</div>
+
+<div>
+<b data-k="e2">
+Ingeniería Industrial
+</b>
+<br>
+<span class="meta">
+Universidad Popular Autónoma de Veracruz
+</span>
+</div>
+
+<div>
+<b data-k="e3">
+Contaduría Pública
+</b>
+<br>
+<span class="meta">
+Universidad del Golfo de México Norte
+</span>
+</div>
+
+</div>
+
+</article>
+
+
+<article class="panel">
+
+<div class="label" data-k="credentials">
+Credenciales
+</div>
+
+<h2 data-k="credentialsTitle">
+Certificaciones y formación complementaria
+</h2>
+
+<div class="list">
+
+<div>Google Project Management</div>
+<div>AWS Cloud Operations</div>
+<div>Data Analytics & Business Intelligence</div>
+<div data-k="c4">Inteligencia Artificial y Prompt Engineering</div>
+<div>Machine Learning</div>
+<div data-k="c6">Ciberseguridad Cisco</div>
+<div>Six Sigma</div>
+
+</div>
+
+</article>
+
+
+<article class="panel">
+
+<div class="label" data-k="availability">
+Disponibilidad
+</div>
+
+<h2 data-k="availabilityTitle">
+Modalidad e interés
+</h2>
+
+<p class="availability" data-k="availabilityP">
+Disponible para posiciones presenciales, híbridas o remotas, con apertura a cambio de residencia. Interés en operaciones comerciales, retail, business development, key account management, Data Analytics, Business Intelligence y transformación digital.
+</p>
+
+</article>
+
+
+<article class="panel">
+
+<div class="label" data-k="contact">
+Contacto
+</div>
+
+<h2 data-k="conversation">
+Conversación profesional
+</h2>
+
+<p data-k="conversationP">
+Estoy abierto a conversar sobre oportunidades laborales y proyectos de consultoría donde pueda aportar experiencia en operaciones comerciales, retail, desarrollo de mercado, análisis de datos, políticas y proyectos sociales.
+</p>
+
+</article>
+
+</section>
+
+</main>
+
+<footer data-k="footer">
+© 2026 Arturo Fuentes Coria | Estrategia, ejecución y resultados.
+</footer>
+
+</div>
+
+
+<script>
+
+const T={
+
+es:{
+
+brand:'© 2026 | Estrategia, ejecución y resultados.',
+
+eyebrow:'Operaciones Comerciales · Retail · Business Development · Data Analytics & BI',
+
+headline:'Profesional con más de 10 años de experiencia en retail, telecomunicaciones, operaciones comerciales, desarrollo de mercado, gestión territorial y liderazgo de equipos.',
+
+summary:'Experiencia en Sell In, Sell Out, Trade Marketing, ejecución en punto de venta, gestión de distribuidores, cuentas clave, KPIs, forecast, inventarios, dashboards y Business Intelligence. Perfil híbrido que integra experiencia operativa y comercial con formación en Data Analytics, Inteligencia Artificial, Prompt Engineering, Machine Learning y Ciberseguridad.',
+
+location:'Xalapa, Veracruz, México',
+
+languages:'Español Nativo · Inglés B1–B2',
+
+mode:'Presencial · Híbrido · Remoto · Cambio de residencia',
+
+profile:'Perfil profesional',
+
+contact:'Contacto',
+
+phone:'📞 Teléfono',
+
+whatsapp:'💬 WhatsApp',
+
+email:'📧 Correo electrónico',
+
+impact:'Impacto profesional',
+
+m1a:'+10 Años',
+
+m1b:'Retail, operaciones y ventas',
+
+m2b:'Puntos de venta gestionados',
+
+m3a:'5 Estados',
+
+m3b:'Cobertura regional liderada',
+
+services:'Servicios profesionales',
+
+consult:'Consultoría',
+
+consultIntro:'Servicios para empresas, organizaciones y proyectos que requieren fortalecer su estrategia comercial, optimizar operaciones o estructurar iniciativas de política y proyectos sociales con análisis, planeación, indicadores y orientación a resultados.',
+
+s1t:'Consultoría Comercial',
+
+s1p:'Diagnóstico y diseño de estrategias orientadas al crecimiento de ventas, desarrollo de mercado, expansión territorial y mejora de la ejecución comercial.',
+
+s1a:'Estrategia comercial y desarrollo de mercado',
+
+s1b:'Sell In, Sell Out y Trade Marketing',
+
+s1c:'Gestión de distribuidores y cuentas clave',
+
+s1d:'Expansión territorial, KPIs y forecast',
+
+s2t:'Consultoría de Operaciones',
+
+s2p:'Evaluación y optimización de procesos comerciales y operativos, productividad de equipos, cobertura territorial y seguimiento de indicadores.',
+
+s2a:'Diagnóstico y mejora de procesos',
+
+s2b:'Retail, Field y Sales Operations',
+
+s2c:'Productividad y gestión de equipos',
+
+s2d:'Indicadores, control y mejora continua',
+
+s3t:'Consultoría Política y Proyectos Sociales',
+
+s3p:'Apoyo en análisis de políticas públicas, diagnóstico social, diseño, seguimiento y evaluación de proyectos sociales con enfoque territorial y orientación a resultados.',
+
+s3a:'Análisis de políticas públicas',
+
+s3b:'Diagnóstico social y territorial',
+
+s3c:'Diseño de proyectos sociales y marco lógico',
+
+s3d:'Indicadores, seguimiento y evaluación',
+
+ctat:'¿Tu empresa u organización requiere apoyo especializado?',
+
+ctap:'Podemos revisar tu situación actual y definir una propuesta de trabajo.',
+
+ctab:'Solicitar consulta',
+
+experience:'Experiencia',
+
+expTitle:'Experiencia profesional',
+
+j0r:'Key Account Manager R7 · Realme',
+
+j0d:'Ene 2026 – Presente',
+
+mexico:'México',
+
+j0p:'Lidero la operación comercial regional en cinco estados, gestionando distribuidores, retail partners y equipos de campo. Desarrollo estrategias de Sell In, Sell Out, expansión territorial y cuentas clave, y analizo KPIs, forecast, inventarios y desempeño para optimizar resultados.',
+
+j1r:'Regional Manager R7 · TECNO Mobile',
+
+j1d:'Ago 2023 – Dic 2025',
+
+region:'Veracruz · Puebla · Tlaxcala · Guerrero · Oaxaca',
+
+j1p:'Lideré la operación regional en cinco estados, coordinando 10 City Managers, más de 200 promotores y más de 780 puntos de venta. Gestioné más de 100 distribuidores y 6 mayoristas. Alcancé +14% en Sell Out, +17% en cobertura y 93% de precisión en forecast.',
+
+j2r:'Retail Manager R7E · OPPO Mobile',
+
+j2d:'Sep 2020 – Ago 2023',
+
+j2p:'Dirigí operaciones de retail, ejecución comercial y equipos de campo. Diseñé estrategias de Trade Marketing, desarrollo de mercado y mejora de procesos, e implementé dashboards y Business Intelligence para fortalecer la toma de decisiones.',
+
+skillsLabel:'Competencias',
+
+skillsTitle:'Habilidades clave',
+
+k1:'Operaciones comerciales',
+
+k2:'Retail',
+
+k3:'Desarrollo de negocio',
+
+k4:'Gestión de cuentas clave',
+
+k5:'Forecast',
+
+k6:'Gestión de distribuidores',
+
+k7:'Expansión territorial',
+
+k8:'Excel avanzado',
+
+k9:'IA aplicada',
+
+k10:'Liderazgo',
+
+k11:'Negociación',
+
+education:'Formación',
+
+educationTitle:'Formación académica',
+
+e1:'Licenciatura en Políticas y Proyectos Sociales',
+
+e1m:'Universidad Abierta y a Distancia de México · En curso',
+
+e2:'Ingeniería Industrial',
+
+e3:'Contaduría Pública',
+
+credentials:'Credenciales',
+
+credentialsTitle:'Certificaciones y formación complementaria',
+
+c4:'Inteligencia Artificial y Prompt Engineering',
+
+c6:'Ciberseguridad Cisco',
+
+availability:'Disponibilidad',
+
+availabilityTitle:'Modalidad e interés',
+
+availabilityP:'Disponible para posiciones presenciales, híbridas o remotas, con apertura a cambio de residencia. Interés en operaciones comerciales, retail, business development, key account management, Data Analytics, Business Intelligence y transformación digital.',
+
+conversation:'Conversación profesional',
+
+conversationP:'Estoy abierto a conversar sobre oportunidades laborales y proyectos de consultoría donde pueda aportar experiencia en operaciones comerciales, retail, desarrollo de mercado, análisis de datos, políticas y proyectos sociales.',
+
+footer:'© 2026 Arturo Fuentes Coria | Estrategia, ejecución y resultados.',
+
+wamsg:'Hola Arturo, vi tu CV y me interesa contactarte.',
+
+cwamsg:'Hola Arturo, me interesa conocer tus servicios de consultoría.',
+
+title:'Arturo Fuentes Coria | CV & Consultoría'
+
+},
+
+
+en:{
+
+brand:'© 2026 | Strategy, execution and results.',
+
+eyebrow:'Commercial Operations · Retail · Business Development · Data Analytics & BI',
+
+headline:'Professional with more than 10 years of experience in retail, telecommunications, commercial operations, market development, territory management and team leadership.',
+
+summary:'Experience in Sell In, Sell Out, Trade Marketing, point-of-sale execution, distributor management, key accounts, KPIs, forecasting, inventory, dashboards and Business Intelligence. Hybrid profile combining commercial and operational experience with training in Data Analytics, Artificial Intelligence, Prompt Engineering, Machine Learning and Cybersecurity.',
+
+location:'Xalapa, Veracruz, Mexico',
+
+languages:'Native Spanish · Intermediate English B1–B2',
+
+mode:'On-site · Hybrid · Remote · Open to relocation',
+
+profile:'Professional profile',
+
+contact:'Contact',
+
+phone:'📞 Phone',
+
+whatsapp:'💬 WhatsApp',
+
+email:'📧 Email',
+
+impact:'Professional impact',
+
+m1a:'+10 Years',
+
+m1b:'Retail, operations and sales',
+
+m2b:'Points of sale managed',
+
+m3a:'5 States',
+
+m3b:'Regional coverage led',
+
+services:'Professional services',
+
+consult:'Consulting',
+
+consultIntro:'Services for companies, organizations and projects seeking to strengthen commercial strategy, optimize operations or structure policy and social-project initiatives through analysis, planning, indicators and results-oriented management.',
+
+s1t:'Commercial Consulting',
+
+s1p:'Diagnosis and design of strategies focused on sales growth, market development, territorial expansion and stronger commercial execution.',
+
+s1a:'Commercial strategy and market development',
+
+s1b:'Sell In, Sell Out and Trade Marketing',
+
+s1c:'Distributor and key-account management',
+
+s1d:'Territorial expansion, KPIs and forecasting',
+
+s2t:'Operations Consulting',
+
+s2p:'Evaluation and optimization of commercial and operational processes, team productivity, territorial coverage and performance indicators.',
+
+s2a:'Process diagnosis and improvement',
+
+s2b:'Retail, Field and Sales Operations',
+
+s2c:'Team productivity and management',
+
+s2d:'Indicators, control and continuous improvement',
+
+s3t:'Policy & Social Projects Consulting',
+
+s3p:'Support in public-policy analysis, social diagnosis, design, monitoring and evaluation of social projects with a territorial and results-oriented approach.',
+
+s3a:'Public-policy analysis',
+
+s3b:'Social and territorial diagnosis',
+
+s3c:'Social-project design and logical framework',
+
+s3d:'Indicators, monitoring and evaluation',
+
+ctat:'Does your company or organization need specialized support?',
+
+ctap:'We can review your current situation and define a tailored work proposal.',
+
+ctab:'Request a consultation',
+
+experience:'Experience',
+
+expTitle:'Professional experience',
+
+j0r:'Key Account Manager R7 · Realme',
+
+j0d:'Jan 2026 – Present',
+
+mexico:'Mexico',
+
+j0p:'I lead regional commercial operations across five states, managing distributors, retail partners and field teams. I develop Sell In, Sell Out, territorial expansion and key-account strategies, and analyze KPIs, forecasts, inventory and performance to optimize results.',
+
+j1r:'Regional Manager R7 · TECNO Mobile',
+
+j1d:'Aug 2023 – Dec 2025',
+
+region:'Veracruz · Puebla · Tlaxcala · Guerrero · Oaxaca',
+
+j1p:'I led regional operations across five states, coordinating 10 City Managers, more than 200 promoters and more than 780 points of sale. I managed more than 100 distributors and 6 wholesalers. I achieved +14% Sell Out, +17% coverage and 93% forecast accuracy.',
+
+j2r:'Retail Manager R7E · OPPO Mobile',
+
+j2d:'Sep 2020 – Aug 2023',
+
+j2p:'I led retail operations, commercial execution and field teams. I designed Trade Marketing, market-development and process-improvement strategies, and implemented dashboards and Business Intelligence to strengthen decision-making.',
+
+skillsLabel:'Capabilities',
+
+skillsTitle:'Core skills',
+
+k1:'Commercial operations',
+
+k2:'Retail',
+
+k3:'Business development',
+
+k4:'Key Account Management',
+
+k5:'Forecasting',
+
+k6:'Distributor management',
+
+k7:'Territorial expansion',
+
+k8:'Advanced Excel',
+
+k9:'Applied AI',
+
+k10:'Leadership',
+
+k11:'Negotiation',
+
+education:'Education',
+
+educationTitle:'Academic background',
+
+e1:"Bachelor's Degree in Social Policies and Projects",
+
+e1m:'Universidad Abierta y a Distancia de México · In progress',
+
+e2:'Industrial Engineering',
+
+e3:'Public Accounting',
+
+credentials:'Credentials',
+
+credentialsTitle:'Certifications and additional training',
+
+c4:'Artificial Intelligence & Prompt Engineering',
+
+c6:'Cisco Cybersecurity',
+
+availability:'Availability',
+
+availabilityTitle:'Work modality and interests',
+
+availabilityP:'Available for on-site, hybrid or remote positions, with openness to relocation. Interested in commercial operations, retail, business development, key account management, Data Analytics, Business Intelligence and digital transformation.',
+
+conversation:'Professional conversation',
+
+conversationP:'I am open to discussing employment opportunities and consulting projects where I can contribute experience in commercial operations, retail, market development, data analysis, public policy and social projects.',
+
+footer:'© 2026 Arturo Fuentes Coria | Strategy, execution and results.',
+
+wamsg:'Hello Arturo, I saw your CV and I am interested in contacting you.',
+
+cwamsg:'Hello Arturo, I am interested in learning about your consulting services.',
+
+title:'Arturo Fuentes Coria | CV & Consulting'
+
+},
+
+
+zh:{
+
+brand:'© 2026 | 战略、执行与成果。',
+
+eyebrow:'商业运营 · 零售 · 商务拓展 · 数据分析与商业智能',
+
+headline:'拥有十年以上零售、电信、商业运营、市场开发、区域管理及团队领导经验。',
+
+summary:'具备 Sell In、Sell Out、Trade Marketing、终端执行、经销商管理、重点客户管理、KPI、销售预测、库存、数据仪表板和商业智能经验，并接受过数据分析、人工智能、提示工程、机器学习和网络安全培训。',
+
+location:'墨西哥韦拉克鲁斯州哈拉帕',
+
+languages:'西班牙语母语 · 英语中级 B1–B2',
+
+mode:'现场 · 混合 · 远程 · 可接受异地工作',
+
+profile:'职业资料',
+
+contact:'联系方式',
+
+phone:'📞 电话',
+
+whatsapp:'💬 WhatsApp',
+
+email:'📧 电子邮件',
+
+impact:'职业成果',
+
+m1a:'+10 年',
+
+m1b:'零售、运营与销售',
+
+m2b:'管理的销售网点',
+
+m3a:'5 个州',
+
+m3b:'负责的区域覆盖',
+
+services:'专业服务',
+
+consult:'咨询服务',
+
+consultIntro:'为企业、机构和项目提供服务，帮助加强商业战略、优化运营，并通过分析、规划、指标和结果导向的方法设计政策与社会项目。',
+
+s1t:'商业咨询',
+
+s1p:'围绕销售增长、市场开发、区域扩张和商业执行改进提供诊断与战略设计。',
+
+s1a:'商业战略与市场开发',
+
+s1b:'Sell In、Sell Out 与 Trade Marketing',
+
+s1c:'经销商与重点客户管理',
+
+s1d:'区域扩张、KPI 与销售预测',
+
+s2t:'运营咨询',
+
+s2p:'评估并优化商业和运营流程、团队生产力、区域覆盖及绩效指标。',
+
+s2a:'流程诊断与优化',
+
+s2b:'零售、外勤与销售运营',
+
+s2c:'团队生产力与管理',
+
+s2d:'指标、控制与持续改进',
+
+s3t:'政策与社会项目咨询',
+
+s3p:'提供公共政策分析、社会诊断、社会项目设计、跟踪与评估支持，强调区域视角和结果导向。',
+
+s3a:'公共政策分析',
+
+s3b:'社会与区域诊断',
+
+s3c:'社会项目设计与逻辑框架',
+
+s3d:'指标、跟踪与评估',
+
+ctat:'您的企业或机构需要专业支持吗？',
+
+ctap:'我们可以分析当前情况，并制定适合的合作方案。',
+
+ctab:'申请咨询',
+
+experience:'工作经历',
+
+expTitle:'职业经历',
+
+j0r:'R7 重点客户经理 · Realme',
+
+j0d:'2026年1月 – 至今',
+
+mexico:'墨西哥',
+
+j0p:'负责五个州的区域商业运营，管理经销商、零售合作伙伴和一线团队。制定 Sell In、Sell Out、区域扩张和重点客户策略，并分析 KPI、销售预测、库存和绩效以优化结果。',
+
+j1r:'R7 区域经理 · TECNO Mobile',
+
+j1d:'2023年8月 – 2025年12月',
+
+region:'韦拉克鲁斯 · 普埃布拉 · 特拉斯卡拉 · 格雷罗 · 瓦哈卡',
+
+j1p:'负责五个州的区域运营，协调10名城市经理、200多名促销人员和780多个销售网点。管理100多家经销商和6家批发商，实现 Sell Out 提升14%、覆盖率提升17%、预测准确率达到93%。',
+
+j2r:'R7E 零售经理 · OPPO Mobile',
+
+j2d:'2020年9月 – 2023年8月',
+
+j2p:'负责零售运营、商业执行和一线团队。制定 Trade Marketing、市场开发和流程改进策略，并通过数据仪表板和商业智能加强决策。',
+
+skillsLabel:'核心能力',
+
+skillsTitle:'关键技能',
+
+k1:'商业运营',
+
+k2:'零售管理',
+
+k3:'商务拓展',
+
+k4:'重点客户管理',
+
+k5:'销售预测',
+
+k6:'经销商管理',
+
+k7:'区域扩张',
+
+k8:'高级 Excel',
+
+k9:'人工智能应用',
+
+k10:'团队领导',
+
+k11:'谈判',
+
+education:'教育背景',
+
+educationTitle:'学历',
+
+e1:'社会政策与项目学士',
+
+e1m:'墨西哥开放与远程大学 · 在读',
+
+e2:'工业工程',
+
+e3:'公共会计',
+
+credentials:'资质',
+
+credentialsTitle:'认证与补充培训',
+
+c4:'人工智能与提示工程',
+
+c6:'Cisco 网络安全',
+
+availability:'工作方式',
+
+availabilityTitle:'工作模式与方向',
+
+availabilityP:'可接受现场、混合或远程职位，也愿意异地工作。关注商业运营、零售、商务拓展、重点客户管理、数据分析、商业智能和数字化转型相关机会。',
+
+conversation:'职业交流',
+
+conversationP:'欢迎就工作机会和咨询项目进行交流，我可以在商业运营、零售、市场开发、数据分析、公共政策与社会项目方面提供经验与支持。',
+
+footer:'© 2026 Arturo Fuentes Coria | 战略、执行与成果。',
+
+wamsg:'你好 Arturo，我看到了你的简历，希望与你联系。',
+
+cwamsg:'你好 Arturo，我想了解你的咨询服务。',
+
+title:'Arturo Fuentes Coria | 简历与咨询服务'
+
+}
+
+};
+
+
+function lang(l){
+
+let t=T[l];
+
+document.documentElement.lang=
+l==='zh' ? 'zh-CN' : l;
+
+document.title=t.title;
+
+
+document
+.querySelectorAll('[data-k]')
+.forEach(e=>{
+
+let k=e.dataset.k;
+
+if(t[k]!=null){
+e.textContent=t[k];
+}
+
+});
+
+
+document.getElementById('wa').href=
+'https://wa.me/525586399463?text='+
+encodeURIComponent(t.wamsg);
+
+
+document.getElementById('cwa').href=
+'https://wa.me/525586399463?text='+
+encodeURIComponent(t.cwamsg);
+
+
+document.getElementById('photo').alt=
+l==='es'
+?'Fotografía profesional de Arturo Fuentes Coria'
+:l==='en'
+?'Professional photo of Arturo Fuentes Coria'
+:'Arturo Fuentes Coria 的职业照片';
+
+
+document
+.querySelectorAll('.lang')
+.forEach(b=>
+b.classList.toggle(
+'active',
+b.dataset.lang===l
+)
+);
+
+
+localStorage.setItem(
+'lang',
+l
+);
+
+}
+
+
+document
+.querySelectorAll('.lang')
+.forEach(
+b=>
+b.onclick=
+()=>lang(b.dataset.lang)
+);
+
+
+document
+.getElementById('theme')
+.onclick=()=>{
+
+let n=
+document.documentElement.dataset.theme==='dark'
+?'light'
+:'dark';
+
+document.documentElement.dataset.theme=n;
+
+localStorage.setItem(
+'theme',
+n
+);
+
+};
+
+
+if(localStorage.getItem('theme')){
+
+document.documentElement.dataset.theme=
+localStorage.getItem('theme');
+
+}
+
+
+lang(
+['es','en','zh']
+.includes(localStorage.getItem('lang'))
+?localStorage.getItem('lang')
+:'es'
+);
+
+</script>
+
 </body>
 </html>
