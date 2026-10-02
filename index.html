@@ -236,7 +236,6 @@ padding:28px 0 36px;
 }
 
 .card,
-.panel,
 .full-section{
 
 background:var(--card);
@@ -319,7 +318,8 @@ text-align:justify;
 .summary,
 .job p,
 .service p,
-.availability{
+.availability,
+.contact-description{
 
 text-align:justify;
 
@@ -466,8 +466,8 @@ color:var(--muted);
 
 
 /* =========================
-   EXPERIENCIA Y CONSULTORÍA
-   MISMO TAMAÑO
+   TODAS LAS SECCIONES
+   MISMO ANCHO
 ========================= */
 
 .full-section{
@@ -647,33 +647,98 @@ font-weight:800;
 
 
 /* =========================
-   SECCIONES INFERIORES
+   FORMACIÓN / CREDENCIALES
 ========================= */
-
-.grid{
-
-display:grid;
-
-grid-template-columns:
-1fr 1fr;
-
-gap:20px;
-
-}
-
-.panel{
-
-padding:24px;
-
-}
 
 .list{
 
 display:grid;
 
-gap:10px;
+gap:14px;
 
 }
+
+
+
+/* =========================
+   CONTACTO FINAL
+========================= */
+
+.contact-final{
+
+display:grid;
+
+grid-template-columns:
+repeat(
+5,
+1fr
+);
+
+gap:12px;
+
+margin-top:22px;
+
+}
+
+.contact-item{
+
+background:var(--soft);
+
+border:1px solid var(--border);
+
+border-radius:16px;
+
+padding:14px;
+
+text-align:center;
+
+font-size:14px;
+
+transition:
+transform .2s ease,
+border-color .2s ease;
+
+}
+
+.contact-item:hover{
+
+transform:translateY(-3px);
+
+border-color:var(--pri);
+
+}
+
+.contact-item strong{
+
+display:block;
+
+margin-bottom:5px;
+
+color:var(--pri);
+
+}
+
+.contact-item.wa-final{
+
+background:#25D366;
+
+color:#fff;
+
+border-color:#25D366;
+
+}
+
+.contact-item.wa-final strong{
+
+color:#fff;
+
+}
+
+
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
 
@@ -696,7 +761,6 @@ font-size:14px;
 @media(max-width:900px){
 
 .hero,
-.grid,
 .consult-grid{
 
 grid-template-columns:1fr;
@@ -706,6 +770,13 @@ grid-template-columns:1fr;
 .metrics{
 
 grid-template-columns:1fr;
+
+}
+
+.contact-final{
+
+grid-template-columns:
+1fr 1fr;
 
 }
 
@@ -740,10 +811,15 @@ flex:1;
 }
 
 .hero-copy,
-.panel,
 .full-section{
 
 padding:20px;
+
+}
+
+.contact-final{
+
+grid-template-columns:1fr;
 
 }
 
@@ -933,7 +1009,7 @@ Arturo Fuentes Coria
 
 
 
-<!-- CONTACTO -->
+<!-- CONTACTO SUPERIOR -->
 
 <section class="card">
 
@@ -1038,7 +1114,7 @@ Retail, operaciones y ventas
 </b>
 
 <span data-k="m2b">
-Distribuidores gestionados
+Puntos de venta
 </span>
 
 </div>
@@ -1452,16 +1528,10 @@ Solicitar consulta
 
 
 <!-- ======================
-     RESTO DEL CV
+     COMPETENCIAS
 ====================== -->
 
-<section class="grid">
-
-
-
-<!-- HABILIDADES -->
-
-<article class="panel">
+<section class="full-section">
 
 <div
 class="label"
@@ -1555,13 +1625,15 @@ Negociación
 
 </div>
 
-</article>
+</section>
 
 
 
-<!-- FORMACIÓN -->
+<!-- ======================
+     FORMACIÓN
+====================== -->
 
-<article class="panel">
+<section class="full-section">
 
 <div
 class="label"
@@ -1645,13 +1717,15 @@ Universidad del Golfo de México Norte
 
 </div>
 
-</article>
+</section>
 
 
 
-<!-- CERTIFICACIONES -->
+<!-- ======================
+     CREDENCIALES
+====================== -->
 
-<article class="panel">
+<section class="full-section">
 
 <div
 class="label"
@@ -1701,13 +1775,15 @@ Six Sigma
 
 </div>
 
-</article>
+</section>
 
 
 
-<!-- DISPONIBILIDAD -->
+<!-- ======================
+     DISPONIBILIDAD
+====================== -->
 
-<article class="panel">
+<section class="full-section">
 
 <div
 class="label"
@@ -1733,13 +1809,15 @@ Disponible para posiciones presenciales, híbridas o remotas, con apertura a cam
 
 </p>
 
-</article>
+</section>
 
 
 
-<!-- CONTACTO -->
+<!-- ======================
+     CONTACTO FINAL
+====================== -->
 
-<article class="panel">
+<section class="full-section">
 
 <div
 class="label"
@@ -1757,14 +1835,98 @@ Conversación profesional
 </h2>
 
 
-<p data-k="conversationP">
+<p
+class="contact-description"
+data-k="conversationP">
 
 Estoy abierto a conversar sobre oportunidades laborales y proyectos de consultoría donde pueda aportar experiencia en operaciones comerciales, retail, desarrollo de mercado, análisis de datos, políticas y proyectos sociales.
 
 </p>
 
-</article>
 
+<div class="contact-final">
+
+
+<a
+class="contact-item"
+href="tel:+525586399463">
+
+<strong data-k="phoneTitle">
+Teléfono
+</strong>
+
++52 55 86 399 463
+
+</a>
+
+
+
+<a
+class="contact-item wa-final"
+id="waFinal"
+target="_blank"
+rel="noopener">
+
+<strong>
+WhatsApp
+</strong>
+
+<span data-k="writeWhatsapp">
+Enviar mensaje
+</span>
+
+</a>
+
+
+
+<a
+class="contact-item"
+href="mailto:arturofc@icloud.com">
+
+<strong data-k="emailTitle">
+Correo electrónico
+</strong>
+
+arturofc@icloud.com
+
+</a>
+
+
+
+<a
+class="contact-item"
+href="https://linkedin.com/in/arturofuentees"
+target="_blank"
+rel="noopener">
+
+<strong>
+LinkedIn
+</strong>
+
+arturofuentees
+
+</a>
+
+
+
+<a
+class="contact-item"
+href="https://www.credly.com/users/arturofuentes"
+target="_blank"
+rel="noopener">
+
+<strong>
+Credly
+</strong>
+
+<span data-k="credentialsLink">
+Ver credenciales
+</span>
+
+</a>
+
+
+</div>
 
 </section>
 
@@ -1831,6 +1993,18 @@ whatsapp:
 email:
 '📧 Correo electrónico',
 
+phoneTitle:
+'Teléfono',
+
+emailTitle:
+'Correo electrónico',
+
+writeWhatsapp:
+'Enviar mensaje',
+
+credentialsLink:
+'Ver credenciales',
+
 impact:
 'Impacto profesional',
 
@@ -1841,7 +2015,7 @@ m1b:
 'Retail, operaciones y ventas',
 
 m2b:
-'Distribuidores gestionados',
+'Puntos de venta',
 
 m3a:
 '5 Estados',
@@ -2102,6 +2276,18 @@ whatsapp:
 email:
 '📧 Email',
 
+phoneTitle:
+'Phone',
+
+emailTitle:
+'Email',
+
+writeWhatsapp:
+'Send message',
+
+credentialsLink:
+'View credentials',
+
 impact:
 'Professional impact',
 
@@ -2112,7 +2298,7 @@ m1b:
 'Retail, operations and sales',
 
 m2b:
-'Distributors managed',
+'Points of sale',
 
 m3a:
 '5 States',
@@ -2373,6 +2559,18 @@ whatsapp:
 email:
 '📧 电子邮件',
 
+phoneTitle:
+'电话',
+
+emailTitle:
+'电子邮件',
+
+writeWhatsapp:
+'发送消息',
+
+credentialsLink:
+'查看资质',
+
 impact:
 '职业成果',
 
@@ -2383,7 +2581,7 @@ m1b:
 '零售、运营与销售',
 
 m2b:
-'管理的经销商',
+'销售网点',
 
 m3a:
 '5 个州',
@@ -2649,6 +2847,15 @@ t.wamsg
 
 
 document
+.getElementById('waFinal')
+.href=
+'https://wa.me/525586399463?text='+
+encodeURIComponent(
+t.wamsg
+);
+
+
+document
 .getElementById('cwa')
 .href=
 'https://wa.me/525586399463?text='+
@@ -2690,7 +2897,9 @@ l
 
 
 
-/* BOTONES DE IDIOMA */
+/* =========================
+   BOTONES DE IDIOMA
+========================= */
 
 document
 .querySelectorAll('.lang')
@@ -2742,7 +2951,9 @@ newTheme
 
 
 
-/* RECUPERAR TEMA */
+/* =========================
+   RECUPERAR TEMA
+========================= */
 
 const savedTheme=
 localStorage.getItem(
@@ -2761,7 +2972,9 @@ savedTheme;
 
 
 
-/* RECUPERAR IDIOMA */
+/* =========================
+   RECUPERAR IDIOMA
+========================= */
 
 const savedLanguage=
 localStorage.getItem(
